@@ -1,19 +1,38 @@
 <%- include('../templates/head') %>
 <body>
-    <%- include('../templates/header') %>
-
-    <%- include('../templates/jumbotron') %>
-
     <div class="container">
-    
-    <a class="btn btn-primary" href="previewTheme.html">previewTheme</a>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">插件</h3>
+            </div>
+            <div class="panel-body">
+                <a href="plugin.html">My97DatePicker / icheck</a>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">VUE</h3>
+            </div>
+            <div class="panel-body">
+                <a href="previewTheme.html">VUE</a>
+            </div>
+        </div>
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title">JQuery</h3>
+            </div>
+            <div class="panel-body">
+                <a href="vue.html">jquery</a>
+            </div>
+        </div>
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">BOOTSTARAP</h3>
+            </div>
+            <div class="panel-body">
+                <a href="previewTheme.html">bootstrap</a>
+            </div>
+        </div>
 
-        <input type="checkbox" />
-        <input id="d01" class="u-data" type="text" onclick="DatePicker.dateId1()" placeholder="选择日期" readonly="">
-        至
-        <input id="d02" class="u-data" type="text" onclick="DatePicker.dateId2()" placeholder="选择日期" readonly="">
     </div>
-
-    <%- include('../templates/footer') %>
-   
     <%- include('../templates/foot') %>

@@ -1,0 +1,27 @@
+<%- include('../templates/head') %>
+<body>
+    <%- include('../templates/header') %>
+
+    <%- include('../templates/jumbotron') %>
+
+    <div class="container">
+
+    <a class="btn btn-primary" href="previewTheme.html">previewTheme</a>
+
+        <input type="checkbox" />
+        <input id="d01" class="u-data" type="text" onclick="DatePicker.dateId1()" placeholder="选择日期" readonly="">
+        至
+        <input id="d02" class="u-data" type="text" onclick="DatePicker.dateId2()" placeholder="选择日期" readonly="">
+        <br>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">ajax 对象请求</h3>
+            </div>
+            <div class="panel-body">
+
+            </div>
+        </div>
+    </div>
+    <%- include('../templates/footer') %>
+
+    <%- include('../templates/foot') %>

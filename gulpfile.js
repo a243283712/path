@@ -1,8 +1,8 @@
 ﻿/*-----------gulp API-------------*/
 //gulp.task(name[, deps], fn) 定义任务  name：任务名称 deps：依赖任务名称 fn：回调函数
-//gulp.src(globs[, options]) 执行任务处理的文件  globs：处理的文件路径(字符串或者字符串数组) 
+//gulp.src(globs[, options]) 执行任务处理的文件  globs：处理的文件路径(字符串或者字符串数组)
 //gulp.dest(path[, options]) 处理完后文件生成路径
-//gulp.watch(glob [, opts], tasks) 或 
+//gulp.watch(glob [, opts], tasks) 或
 //gulp.watch(glob [, opts, cb])  监视文件
 
 /*-----------Browsersync API--------------*/
@@ -23,7 +23,7 @@ var tplDir = './app/templates';  // 模版目录
 
 // ----------------静态页面开发流程----------------begin
 //默认任务
-gulp.task('default',['server']); 
+gulp.task('default',['server']);
 
 //静态服务器
 gulp.task('server', function() {
@@ -101,8 +101,8 @@ gulp.task('less', function () {
         })
         .pipe(c$.autoprefixer({
             browsers: ['last 2 versions', 'Android >= 4.0'],
-            cascade: true, //是否美化属性值 默认：true 
-            remove: true //是否去掉不必要的前缀 默认：true 
+            cascade: true, //是否美化属性值 默认：true
+            remove: true //是否去掉不必要的前缀 默认：true
         }))
         .pipe(c$.sourcemaps.write('./'))
         .pipe(gulp.dest('./dist/css')); //将会在dist/css下生成main.css
@@ -141,6 +141,11 @@ gulp.task('copy', function(){
     ])
     .pipe(gulp.dest('./dist/libs/jquery'));
 
+    gulp.src([
+      './app/json/**'
+    ])
+    .pipe(gulp.dest('./dist/json'));
+
     // gulp.src([
     //   './app/libs/echarts/**'
     // ])
@@ -162,7 +167,7 @@ gulp.task('copy', function(){
     .pipe(gulp.dest('./dist/libs/nicescroll'));
 
     gulp.src([
-    
+
       './app/libs/icheck/icheck.min.js'
     ])
     .pipe(gulp.dest('./dist/libs/icheck'));
@@ -175,7 +180,7 @@ gulp.task('copy', function(){
     //   './app/libs/font-awesome-4.7.0/**'
     // ])
     // .pipe(gulp.dest('./dist/libs/font-awesome-4.7.0'));
-    
+
     //gulp.src([
 //      './app/libs/zTree_v3/**',
 //    ])
