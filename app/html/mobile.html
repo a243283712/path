@@ -1,0 +1,2952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+
+    <style type="text/css">
+        body{font-family: 'Microsoft Yahei';color: #555;}
+ul,ol,dl,dt,dd{margin: 0;padding: 0}
+ul{list-style: none;}
+table{font-size: 12px;}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{vertical-align: middle;padding: 10px;border-top-color: #eee;}
+a{color: #666;}
+a:hover{color: #45B6F7;text-decoration: none;}
+a:focus{outline: 0;}
+.thumbnail{border: none;padding: 0;margin: 0}
+.btn{border-radius: 2px;padding: 6px 15px;}
+.btn-xs, .btn-group-xs > .btn{border-radius: 2px;padding: 3px 6px;}
+.btn-sm, .btn-group-sm > .btn{border-radius: 2px;padding: 5px 12px;}
+.btn-lg, .btn-group-lg > .btn{font-size: 18px;border-radius: 4px;padding: 12px 28px;}
+.btn-default{border-color: #ddd;color: #666;}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default{border-color: #bbb;color: #444;}
+.btn-primary{background-color: #45B6F7;border-color: #45B6F7;}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary{background-color: #45B6F7;border-color: #45B6F7;opacity: 0.85;
+filter:alpha(opacity=85);}
+.btn-danger{background-color: #FF5E52;border-color: #FF5E52;}
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open > .dropdown-toggle.btn-danger{background-color: #EF4639;border-color: #EF4639;}
+
+.label{border-radius: 2px;font-weight: normal;padding: 0 3px;}
+.label-primary{background-color: #45B6F7;}
+
+.modal-content{border-radius: 4px;border: none;}
+
+
+@media (min-width:768px){.container{width:auto}}
+@media (min-width:992px){.container{width:auto}}
+@media (min-width:1200px){.container{width:auto}}
+
+
+img{max-width: 100%;}
+
+body{
+    background-color: #f6f6f6;
+    position: relative;
+    /*margin-top: 79px;*/
+}
+.container{
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0;
+}
+.header{
+    /*margin-left: -280px;*/
+    /*margin-top: -99px;*/
+    /*height: 64px;*/
+    /*padding: 0;*/
+    /*position: fixed;*/
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #fff;
+    padding: 55px 0 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #EAEAEA;
+    /*box-shadow: 0 1px 4px rgba(0,0,0,.05);*/
+    border-color: rgba(0,0,0,.08);
+    box-shadow: 0 1px 3px rgba(0,0,0,.03)
+
+}
+
+
+.site-minicat .header,
+.page-template-pagesnavs-php .header,
+.page-template-pagestheme-php .header,
+.page-template-pagestools-php .header,
+.page-template-pagesthemes-php .header,
+.category-job .header{box-shadow: none;border-bottom: none;margin-bottom: 0;}
+
+
+.carousel{margin-bottom: 15px;z-index: 0;}
+.carousel-inner .item a{display: block;text-align: center;}
+.carousel-inner .item img{margin: 0 auto;border-radius: 4px;}
+.carousel-control{width: 40px;height:80px;top:50%;margin-top: -40px;}
+.carousel-control.left, .carousel-control.right{background: none;}
+.carousel-control:hover{background-color: #000;opacity: .5;color: #fff;}
+.carousel .fa{font-size: 30px;margin-top: 62%;}
+.carousel-indicators{bottom: 6px;}
+#homeslider{margin-bottom: 15px;}
+
+.content-wrap {
+    width: 100%;
+    float: left;
+}
+.content {
+    position: relative;
+    min-height: 500px;
+    margin-right: 380px;
+    margin-bottom: 15px;
+}
+.site-layout-1 .content{
+    margin-right: 0;
+}
+.sidebar {
+    float: left;
+    margin-left: -360px;
+    width: 360px;
+    position: relative;
+}
+
+.single .content{
+    padding: 0 20px;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+}
+
+
+
+.single-format-aside .content{margin-right: 0;}
+
+
+
+
+
+/* logo ======================================================================================================== */
+.logo{
+    overflow: hidden;
+    float: left;
+    margin: 0;
+}
+.logo a{
+    height: 32px;
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+}
+.logo img{vertical-align: top;max-height: 32px;display: block;margin-bottom: 32px;}
+
+.brand{
+    font-size: 14px;
+    float: left;
+    line-height: 15px;
+    color: #bbb;
+    padding-left: 10px;
+    position: relative;
+    top: 1px;
+    border-left: 2px solid #eaeaea;
+    margin-left: 10px;
+    overflow: hidden;
+    height: 30px;
+}
+
+
+/* site-navbar ======================================================================================================== */
+
+.site-navbar{
+    float: right;
+    font-size: 18px;
+    margin-top: 7px;
+    margin-right: -15px;
+}
+.site-navbar li{
+    position: relative;
+    float: left;
+}
+.site-navbar li:hover{z-index: 2}
+.site-navbar a{
+    display: block;
+    padding: 0 15px;
+    color: #666;
+}
+.site-navbar li:hover > a,
+.site-navbar li.active a:hover,
+.site-navbar a:hover{
+    color: #45B6F7;
+}
+
+.site-navbar .fa{width: 18px;}
+.site-navbar .fa-angle-down{width: 11px;}
+
+.search-on .site-navbar li.navto-search a{color: #45B6F7;}
+
+.topbar .fa{width: 14px;}
+.topbar .fa-angle-down{width: 9px;}
+.topbar{
+    position: absolute;
+    top: -39px;
+    left: 0;right: 0;
+    margin-bottom: 20px;
+    margin-right: -15px;
+    color: #999;
+}
+.topbar a{
+    color: #999;
+}
+.topbar a:hover{
+    color: #45B6F7;
+}
+.topmenu{
+    float: right;
+}
+.topmenu li{
+    position: relative;
+    float: left;
+}
+.topmenu li:hover{z-index: 2}
+.topmenu a{
+    display: block;
+    padding: 0 15px;
+    color: #999;
+}
+
+
+.topmenu .red{color: #FF5E52;display: inline-block;}
+.topmenu .red:hover{color: #FF5E52;text-decoration: underline;}
+
+.site-nav .sub-menu{display: none;position: absolute;top: 100%;left: 0;background-color: #fff;font-size: 12px;padding: 6px 0;border: 1px solid #ddd;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);line-height: 32px;width: 132px;font-weight: bold;border-radius: 4px;}
+.site-nav ul .sub-menu{left: 100%;top: -7px;border-radius: 0}
+.site-nav .sub-menu li{float: none;}
+.site-nav .sub-menu a:hover{background-color: #f6f6f6;}
+.site-nav li:hover > .sub-menu{display: block;}
+.site-nav li:hover .fa-angle-down{-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg);}
+.site-nav li.current-menu-item > a, .site-nav li.current-menu-parent > a{color: #45B6F7;}
+
+
+.sign-info{font-size: 12px;clear: both; margin-top: 10px;}
+
+.site-search{background-color: #fff;background-color: rgba(255,255,255,0.95);position: absolute;top:0;left:0;right:0;height: 100px;z-index: 8;}
+.search-on .site-search{top: 108px;}
+.site-search-form{padding: 25px 20%;overflow: hidden;}
+.search-input{float:left;color:#999;border:solid 1px #ddd;width:85%;height: 50px;padding: 4px 12px;border-right: none;font-size: 16px;border-radius: 2px 0 0 2px;outline: none}
+.search-input:focus{border-color: #45B6F7;}
+.search-btn{color:#fff;border: none;background: #45B6F7;height: 50px;font-size: 16px;padding: 0 12px;border-radius: 0 2px 2px 0;width: 15%;}
+.search-btn:hover, .search-btn:focus{color:#fff;opacity: 0.85;filter:alpha(opacity=85);}
+.search-btn .fa{font-size: 16px;width: 16px;}
+.site-search-form a{margin-left: 20px;color: #999;}
+.site-search-form a:hover{color: #45B6F7;}
+
+/*#bdcs{padding: 25px 20%;overflow: hidden;}
+#bdcs .bdcs-search-form-input{float:left;color:#999;border:solid 1px #ddd;width:85%;height: 50px;padding: 4px 12px;border-right: none;font-size: 16px;border-radius: 2px 0 0 2px;outline: none}
+#bdcs .bdcs-search-form-input:focus{border-color: #45B6F7;}
+#bdcs .bdcs-search-form-submit {color:#fff;border: none;background: #45B6F7;height: 50px;font-size: 16px;padding: 0 12px;border-radius: 0 2px 2px 0;width: 15%;outline: none}
+#bdcs .bdcs-search-form-submit:hover,
+#bdcs .bdcs-search-form-submit:focus{color:#fff;opacity: 0.85;filter:alpha(opacity=85);}*/
+
+.search .site-search{position: relative;margin: -15px 0 15px;border-bottom: 1px solid #eaeaea;}
+
+
+/* branding ======================================================================================================== */
+.branding{
+    position: relative;
+    z-index: 9;
+    text-align: center;
+    padding: 70px 20px;
+}
+.branding h1, .branding h2{
+    margin: 0 0 20px;
+    font-size: 33px;
+}
+.branding h1 .fa,
+.branding h2 .fa{
+    display: block;
+    margin-bottom: 10px;
+}
+.branding .btn{margin: 0 10px;}
+.branding-primary{
+    background-color: #45B6F7;
+    color: #fff;
+}
+.branding-primary p{
+    font-weight: bold;
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 0;
+}
+.branding-primary p strong{
+    color: #2C7EB3;
+}
+.branding-primary .btn{border-color: #fff;color: #fff;}
+.branding-primary .btn:hover{background-color: #fff;color: #45B6F7;}
+
+.branding-black{
+    background-color: #444;
+}
+.branding-black h1, .branding-black h2{
+    color: #ccc;
+}
+.branding-black .btn{border-color: #ccc;color: #ccc;}
+.branding-black .btn:hover{background-color: #ccc;color: #444;}
+
+.branding-white{
+    background-color: #fff;
+}
+.branding-white h1{
+    color: #888;
+}
+.branding-sm{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.branding-mb{
+    margin-bottom: 15px;
+}
+
+/* title ======================================================================================================== */
+
+
+.title, .pagetitle{margin-bottom: 10px;overflow: hidden;}
+.title h3, .pagetitle h1,  .pagetitle h2{font-size: 20px;margin: 0;float: left;}
+.title .more{float: right;position: relative;top: 5px;}
+.title .more a{display: inline-block;margin-left: 20px;color: #999;}
+.title .more a:hover{color: #45B6F7;}
+.pagetitle small{margin-left: 10px;position: relative;top: 2px;color: #999;}
+
+.title .pull-right{
+    font-size: 12px;
+    position: relative;
+    bottom: -4px;
+}
+.title .pull-right a{
+    color: #bbb;
+}
+.title .pull-right a:hover{
+    color: #999;
+}
+
+.single .title{
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+/* ads ======================================================================================================== */
+.asb{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.asb img{
+    max-width: 100%;
+}
+.asb-large {
+    margin-bottom: 30px;
+}
+.asb-large img{
+    max-width: 100%
+}
+
+.asb-post {
+    margin-bottom: 30px;
+}
+.asb-index, .asb-tag, .asb-cat, .asb-search{margin-bottom: 15px;}
+.asb-post-01{margin-bottom: 20px;}
+.asb-your{
+    display: block;
+    background-color: #FBFBFB;
+    border: 2px dashed #BBB;
+    color: #AAA;
+    font-size: 15px;
+    text-align: center;
+    overflow: hidden;
+    clear: both;
+}
+.asb-your:hover{border-color: #FF5E52;color: #FF5E52;}
+
+
+
+
+
+.excerpt{
+    border: 1px solid #eaeaea;
+    padding: 20px 20px 20px 255px;
+    overflow: hidden;
+    background-color: #fff;
+    margin-bottom: -1px;
+}
+.excerpt .post-linkto{text-align: right;margin-bottom: 0;}
+.excerpt-text{padding-left: 20px;}
+.excerpt-text .note{margin-bottom: 0;}
+.excerpt-1{border-radius: 4px 4px 0 0}
+.excerpt-10{border-radius: 0 0 4px 4px}
+.excerpt:hover{
+    background-color: #f9f9f9;
+    position: relative;
+    z-index: 2;
+}
+.excerpt .focus{
+    float: left;
+    margin-left: -235px;
+    width: 220px;
+}
+.excerpt .thumb{
+    width: 220px;
+    height: 150px;
+}
+.excerpt header{
+    margin-bottom: 10px;
+}
+.excerpt .cat{
+    color: #fff;
+    background-color: #45BCF9;
+    padding: 3px 6px;
+    font-size: 12px;
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    margin-right: 6px;
+}
+.excerpt .cat:hover{
+    opacity: 0.85;
+    filter:alpha(opacity=85);
+}
+.excerpt .cat i{
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    right: -4px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-left: 4px solid #45BCF9;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+.excerpt h2{
+    display: inline;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 0;
+    font-weight: bold;
+}
+.excerpt h2 a{
+    color: #555;
+}
+
+.excerpt h2 a:hover{
+    color: #45B6F7;
+}
+.excerpt h2 a span{
+    color: #FF5E52;
+}
+.excerpt h2 a:hover span{
+    color: #45B6F7;
+}
+.excerpt time, .excerpt .pv, .excerpt .pc, .excerpt .author{
+    margin-right: 20px;
+}
+.excerpt .note{
+    font-size: 12px;
+    color: #999;
+    word-wrap:break-word;
+    line-height: 20px;
+}
+.excerpt .meta{
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.excerpt .meta .fa{
+    margin-right: 4px;
+}
+.excerpt .meta a{
+    color: #999;
+    // text-decoration: underline;
+}
+.excerpt .meta a:hover{
+    color: #45B6F7;
+}
+
+.list-comments-r .excerpt .meta .pc{
+    float: right;
+    margin-right: 0;
+}
+
+
+.excerpt h2 b,
+.excerpt .note b{
+    color: #FF5549;
+}
+.excerpt .note b{
+    font-weight: normal;
+}
+
+
+.excerpt-minic{
+    border: 1px solid #eaeaea;
+    padding: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+.excerpt-minic h2{
+    font-size: 22px;
+    line-height: 24px;
+    margin-top: 0;
+    font-weight: bold;
+    margin: 0 0 15px;
+}
+.excerpt-minic h2 a{
+    color: #555;
+}
+.excerpt-minic h2 a:hover{
+    color: #45B6F7;
+}
+.excerpt-minic h2 a span{
+    color: #FF5E52;
+}
+.excerpt-minic h2 a:hover span{
+    color: #45B6F7;
+}
+.excerpt-minic time, .excerpt-minic .pv, .excerpt-minic .pc, .excerpt-minic .author{
+    margin-right: 20px;
+}
+.excerpt-minic .meta{
+    color: #999;
+    margin-bottom: 15px;
+    font-size: 12px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eaeaea;
+}
+.excerpt-minic .meta .fa{
+    margin-right: 4px;
+}
+.excerpt-minic .meta a{
+    color: #999;
+    text-decoration: underline;
+}
+.excerpt-minic .meta a:hover{
+    color: #45B6F7;
+}
+.excerpt-minic .article-content p{
+    text-indent: 30px;
+}
+.excerpt-minic .article-content p:last-child{
+    margin-bottom: 0;
+}
+.excerpt-minic .note{
+    color: #666;
+    margin-bottom: 0;
+    text-indent: 28px;
+}
+
+.excerpt-minic-index{
+    /*margin-bottom: 20px;*/
+}
+.excerpt-minic-index h2{
+    font-size: 18px;
+}
+.excerpt-minic-index .meta{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.excerpt-minic-index .red{
+    margin-left: -8px;
+    color: #FF5E52;
+}
+
+
+
+
+/* article content ======================================================================================================== */
+.article-header{
+    margin-bottom: 20px;
+    padding: 25px 0;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+.article-title{margin-top: 0;font-size: 26px;line-height: 36px;}
+.article-title a,
+.article-title a:hover{
+    color: #555;
+
+}
+
+.article-title a span{
+    color: #FF5E52;
+}
+.article-meta{
+    font-size: 12px;
+    color: #999;
+}
+.article-meta .item{
+    margin-right: 20px;
+}
+
+.article-content{font-size:15px;line-height:25px;word-wrap:break-word;}
+.article-content img{margin: 5px 0; display:block;max-width:100%;height:auto}
+.article-content h2, .article-content h3, .article-content h4ï¼Œ .article-content h5{padding:10px 0;margin-bottom:18px;color: #555;font-weight:bold;}
+.article-content h2{font-size:18px;font-weight:bold;margin:18px 0;border-bottom: 1px solid #eaeaea;}
+.article-content h3{font-size:16px;}
+.article-content h4{font-size:15px;}
+.article-content h5{font-size:14px;}
+.article-content ul, .article-content ol{margin:0 0 18px 50px}
+.article-content ul{list-style: disc;}
+.article-content ol{list-style: decimal;}
+.article-content li{margin-bottom: 6px;}
+.article-content p{margin-bottom:18px;word-wrap:break-word}
+.article-content pre{word-wrap:break-word}
+.article-content table{border-top:solid 1px #ddd;border-left:solid 1px #ddd;width:100%;margin-bottom:18px}
+.article-content table th{background-color:#f9f9f9;text-align:center}
+.article-content table td,.article-content table th{border-bottom:solid 1px #ddd;border-right:solid 1px #ddd;padding:5px 10px}
+.article-content .alignnone{margin:0 auto;}
+.article-content .alignleft{float:left;text-align:left;margin-right:10px}
+.article-content .aligncenter{margin: 0 auto;text-align: center;display: block;}
+.article-content .alignright{float:right;text-align:right;margin-left:10px}
+.article-content .wp-caption{margin-bottom: 18px;background-color: #f6f6f6;padding: 10px 10px 1px;max-width: 100%}
+.article-content .wp-caption img{margin: 0 0 5px;}
+.article-content .wp-caption p{margin-bottom: 10px;text-indent: 0;}
+.article-content .wp-caption.alignnone{text-align: center;}
+.article-content .wp-caption:hover .wp-caption-text{color: #45B6F7;}
+.article-content a{text-decoration:underline;color: #45B6F7;}
+.article-content a:hover{color: #FF5E52;}
+
+.article-content pre,.comment pre{margin:20px 0;font:12px/20px 'courier new';background:#272822;padding:10px 15px;color:#F8F8D4;border:none}
+.article-content blockquote{margin: 30px 30px;padding: 15px 20px 1px;font-size: 16px;color: #999;border-left: 5px solid #EEE;}
+.article-content blockquote p{margin:0;padding:0;margin-bottom: 10px;}
+
+.p_indent .article-content p{text-indent: 30px;}
+
+.post-copyright {
+    background-color: #eee;
+    font-size: 12px;
+    padding: 8px 30px;
+    border-radius: 2px;
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 18px;
+}
+.post-copyright a, .post-copyright a:hover {
+    color: #aaa;
+    text-decoration: none;
+}
+.post-copyright:hover {
+    background-color: #45B6F7;
+    color: #fff;
+}
+.post-copyright:hover a {
+    color: #fff;
+}
+
+.asb-post-footer{margin-bottom: 18px;}
+.asb-post-footer b{font-weight:normal;color:#41C282}
+.asb-post-footer strong{font-weight:normal;color:#FD6A5E}
+.asb-post-footer a{text-decoration:none;border-bottom:solid 2px #eee;}
+.asb-post-footer a:hover{border-bottom-color:#1FAEFF;}
+
+
+.gallery .gallery-item{margin-bottom: 18px !important;margin-top: 0 !important;text-align: center !important;}
+.gallery .gallery-item a{display: inline-block;}
+.gallery .gallery-item img{border: none !important;margin:0 auto !important;}
+.gallery .gallery-item dd{color: #999 !important;margin-top: 2px !important;}
+
+
+/* article tags
+ * ====================================================
+*/
+.article-tags {
+    margin: 30px 0;
+    text-align: center;
+}
+.article-tags a {
+    display: inline-block;
+    padding: 4px 7px 3px;
+    margin: 0 4px 4px 0;
+    color: #fff;
+    font-size: 12px;
+    background-color: #45B6F7;
+    opacity: 0.85;
+    filter:alpha(opacity=85);
+}
+.article-tags a:hover {
+    color: #fff;
+    opacity: 1;
+    filter:alpha(opacity=100);
+}
+
+
+.tag-clouds {
+    overflow: hidden;
+}
+.tag-clouds a {
+    float: left;
+    margin: 0 1% 1% 0;
+    padding: 0 10px;
+    line-height: 28px;
+    height: 28px;
+    width: 19%;
+    color: #999;
+    background-color: #eee;
+    font-size: 12px;
+    border-radius: 2px;
+}
+.tag-clouds a small{
+    margin-left: 5px;
+}
+.tag-clouds a:hover{
+    color: #fff;
+    background-color: #4DAAE6;
+}
+
+
+
+/* article nav
+ * ====================================================
+*/
+.article-nav {
+    overflow: hidden;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #bbb;
+}
+.article-nav span {
+    float: left;
+    position: relative;
+    width: 50%;
+}
+.article-nav span.article-nav-next {
+    float: right;
+    text-align: right
+}
+.article-nav span.article-nav-next::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: block;
+    width: 1px;
+    background-color: #eee;
+}
+.article-nav a {
+    color: #999;
+    margin-right: 10px;
+    display: inline-block;
+}
+.article-nav span.article-nav-next a {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.article-nav a:hover {
+    color: #45B6F7;
+}
+
+
+
+.article-author{
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 10px 20px 10px 90px;
+    border-left: 4px solid #eee;
+    color: #999;
+}
+.article-author .avatar{
+    float: left;
+    margin-left: -70px;
+    width: 50px;
+    border-radius: 50%;
+}
+.article-author h4{
+    margin: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+}
+.article-author h4 .fa{
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+
+
+/*  ======================================================================================================== */
+.relates ul{
+    list-style: disc;
+    margin-left: 18px;
+    color: #bbb;
+    margin-bottom: 30px;
+}
+.relates li{
+    margin-top: 12px;
+}
+.relates a{
+    color: #777;
+}
+.relates a:hover{
+    color: #45B6F7;
+    // text-decoration: underline;
+}
+.relates a span{
+    color: #FF5E52;
+}
+.relates a:hover span{
+    color: #45B6F7;
+}
+
+
+.action-share{color: #666;position: relative;text-align: center;margin: 30px 0;}
+.bdsharebuttonbox.bdshare-button-style0-24 a{float: none;display: inline-block;margin: 0 2px;position: relative;}
+.bdsharebuttonbox.bdshare-button-style0-24 span{position: relative;*top: -3px;vertical-align: top;}
+.bdsharebuttonbox.bdshare-button-style0-24 .bds_count{margin: 0;color: #666;}
+.bdsharebuttonbox.bdshare-button-style0-24 a.bds_more{color: #666;font-size: 14px;}
+
+.fcode{margin-bottom: 20px;overflow: hidden;clear: both;}
+
+
+/*  ======================================================================================================== */
+
+#respond{padding-bottom: 25px;}
+#respond, #postcomments{position:relative;}
+.comment{position: relative;}
+.comment #respond{padding:10px 0 15px 46px}
+.comment #commentform{margin-bottom:0}
+.commentnew .comt-m{margin-bottom:5px}
+.commentlist{padding:0;list-style:none;margin:0}
+.comt-avatar{width:36px;height:36px;background-color:#FFF;float:left;display:inline;position:relative;margin-top: 19px;}
+.commentnew .comt-avatar{margin-top: 0;}
+.comt-avatar .avatar{display:block;border-radius:50%;width:36px;height:36px}
+.comt-main{margin-left:46px;margin-right:60px;color:#888;line-height:22px;position:relative;font-size: 14px;padding: 0 0 15px;word-wrap: break-word;max-height: 300px;overflow: hidden;}
+.comt-main p{margin-top: 15px;margin-bottom: 0;}
+.comt-author{margin-right: 5px;}
+.url{color:#60c4fd;}
+.url:hover{color:#60c4fd;text-decoration:underline;opacity: 0.85;
+filter:alpha(opacity=85);}
+.comt-meta{font-size:12px;color:#bbb;}
+.comt-meta .signin-loader{margin-left: 10px;}
+.comment-reply-link{font-size:12px;color:#bbb;display:none}
+.comment:hover>.comt-main .comment-reply-link{display:inline-block;margin-left: 5px;}
+.comment pre{margin:3px 0 5px;padding:7px 10px;border-radius:1px}
+.depth-1{border-bottom:#eee 1px solid}
+.comment .children{list-style:none;padding:0;}
+.comment .children .comment{margin:0;border-top:1px solid #eee}
+.commentlist > .comment .children{margin-left: 46px;}
+.comt-f{position: absolute;top:15px;right:0;font-size:16px;color:#ccc}
+.comment:hover .comt-f{color:#666}
+.comt-approved{border-radius:2px;font-size:12px;background-color:#eee;color:#999;display:inline-block;padding:1px 5px 0;margin-top:4px;line-height:20px;margin-left:5px}
+.wp-smiley{margin-bottom:2px}
+
+.sidebarfix .comt-main{padding: 6px 0 4px;line-height: 20px;font-size: 12px;}
+.sidebarfix .depth-1{border-bottom-color: #eee;}
+.sidebarfix .comment .children .comment{border-top-color: #eee;}
+
+#comments{margin-bottom:15px;font-size: 16px;}
+#comments b{font-weight:normal;color:#ff5e52}
+#comments .pull-right{font-size:12px;position:relative;top:5px}
+#commentform{margin-bottom:5px;}
+.comt-count{float:right;color:#999;margin-bottom:5px}
+.comt{position:relative;padding-left: 46px;}
+
+.comt-title{font-size: 12px;color: #999;float: left;margin-left: -46px;width: 36px;text-align: center;}
+.comt-title .avatar{height:36px;width:36px;border-radius:50%;margin-bottom: 5px;}
+.comt-title p{margin-bottom: 0;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+.comt-box{border:2px solid #ccd4d9;border-radius:2px;padding:4px 0 0 4px;background-color: #fff;position: relative;}
+.comt-ctrl{background-color:#fbfbfb;height:36px;margin-left:-4px;border-top:solid 1px #f2f2f2;}
+#submit{position: absolute;right:-2px;bottom:-2px;background: #45B6F7;border: none;border: 2px solid;border-color: #45B6F7;border-left: none;border-top: none;padding: 0px;width:100px;height: 38px;color: #fff;outline: 0;border-radius: 0 0 2px 0;font-size: 16px;}
+
+#comment{width: 100%;resize: none;overflow-x: hidden;overflow-y: auto;border: none;line-height: 22px;font-size: 14px;outline: 0;color: #666;height: 68px;}
+
+.hide{display: none;}
+
+.comt-tips{text-align: center;margin-right: 110px;line-height: 116px;font-size: 18px;color:#fff;}
+.comt-tip{position: absolute;top: -2px;left: -2px;background: #7AD071;right: -2px;z-index: 2;bottom: -2px;border-radius: 2px;}
+.comt-error{background: #FF5E52;}
+
+.comt-comterinfo{padding:15px 0;text-align: center;}
+.comt-comterinfo ul{padding: 0;margin: 0;list-style: none;text-align: left;display: inline-block;}
+.comt-comterinfo li{margin-bottom:5px}
+.comt-comterinfo input{margin-right:10px;position:relative;*bottom:-3px;border: 2px solid #CCD4D9;border-radius: 2px;height:34px;padding: 3px 5px;outline: none;width: 220px;box-shadow: none;*height: 20px;}
+#cancel-comment-reply-link{display:none;font-size:12px;text-align: center;margin-top: 7px;color: #999;}
+#cancel-comment-reply-link:hover{color: #FF5E52;}
+.comment #cancel-comment-reply-link{display:block}
+
+.comment-signarea{background-color: #F6F6F6;border-radius: 7px;padding: 30px 20px;text-align: center;margin-bottom: 20px;}
+.comment-signarea h3{margin: 0;padding: 0;margin-bottom: 15px;font-weight: normal;font-size: 18px;}
+.comment-signarea .auth{margin: 0 5px;}
+
+
+
+/* rollbar ======================================================================================================== */
+
+.rollbar {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    display: none;
+}
+.rollbar ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 50px;
+}
+.rollbar li{
+    position: relative;
+    margin-top: 5px;
+    text-align: center;
+    opacity: .4;
+    filter: alpha(opacity=40);
+}
+.rollbar a {
+    position: relative;
+    z-index: 2;
+    display: block;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #666;
+    color: #fff;
+}
+.rollbar a:hover{
+    color: #fff;
+}
+.rollbar .fa{
+    line-height: 50px;
+    font-size: 34px;
+}
+.rollbar .fa-comments{font-size: 24px;}
+
+.rollbar li:hover, .rollbar li:hover h6 {
+    opacity: .9;
+    filter: alpha(opacity=90)
+}
+.rollbar li:hover h6{
+    right: 100%;
+}
+.rollbar h6{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: -15%;
+    margin: -13px 10px 0 0;
+    line-height: 26px;
+    font-size: 12px;
+    background-color: #666;
+    color: #fff;
+    width: 53px;
+    border-radius: 2px;
+    text-align: center;
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+.rollbar h6 i{
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    margin-top: -4px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-left: 4px solid #666;
+    border-top: 4px solid rgba(0, 0, 0, 0);
+    border-bottom: 4px solid rgba(0, 0, 0, 0);
+}
+
+
+
+
+
+
+/* f404 ======================================================================================================== */
+.f404 {
+    text-align: center;
+    margin: 100px 0
+}
+.f404 h1 {
+    font-size: 60px;
+    margin: 40px 0 20px;
+}
+.f404 h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+/* pagination ======================================================================================================== */
+.pagination {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    display: block;
+}
+.pagination ul {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0
+}
+.pagination ul > li {
+    display: inline
+}
+.pagination ul > li > a,
+.pagination ul > li > span {
+    margin: 0 2px;
+    float: left;
+    padding: 5px 12px;
+    background-color: #ddd;
+    color: #666;
+    border-radius: 2px;
+    opacity: .88
+}
+.pagination ul > li > a:hover,
+.pagination ul > li > a:focus {
+    opacity: 1
+}
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+    background-color: #45B6F7;
+    color: #fff
+}
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+    cursor: default
+}
+.pagination ul > li > span,
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover,
+.pagination ul > .disabled > a:focus {
+    color: #999999;
+    background-color: transparent;
+    cursor: default
+}
+
+.pagination-loading{font-size: 16px;text-align: center;color: #999;padding: 15px 0;}
+.pagination-loading img{width: 80px}
+
+.ias_trigger{margin: 15px 0 0;}
+.ias_trigger a{display: block;background-color: #e6e6e6;line-height: 32px;text-align: center;color: #999;}
+.ias_trigger a:hover{display: block;background-color: #ddd;color: #666;}
+
+
+/* pagenav ======================================================================================================== */
+.pagenav {
+    overflow: hidden;
+    text-align: center;
+    padding: 20px
+}
+.pagenav a,
+.pagenav .current,
+.pagenav .page-numbers {
+    padding: 6px 12px 5px;
+    color: #666;
+    display: inline-block;
+    border-radius: 3px;
+    background-color: #eee;
+    margin: 0 1px;
+    font-size: 12px;
+}
+.pagenav .current {
+    background-color: #45B6F7;
+    color: #fff
+}
+.pagenav a:hover {
+    background-color: #ccc;
+    color: #444;
+}
+
+
+
+/* widget ======================================================================================================== */
+
+.widget {
+    clear: both;
+    position: relative;
+    margin-bottom: 15px;
+
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+    overflow: hidden;
+}
+.widget h3 {
+    font-size: 18px;
+    color: #666;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #fbfbfb;
+    margin: 0;
+    padding: 11px 15px 10px;
+    /*background: url(../img/bg.png) 0 bottom repeat-x;*/
+}
+.widget.affix {
+    position: fixed;
+    width: 360px;
+}
+.widget .title strong {
+    border-bottom-color: transparent
+}
+.widget .title .btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-weight: normal;
+    padding: 2px 7px 1px
+}
+
+.widget-tops{height: 200px;}
+.widget-nav{background-color: #fbfbfb;line-height: 36px;height: 36px;border-bottom: 1px solid #eaeaea;}
+.widget-nav li{float: left; width: 25%;text-align: center;  color: #999;border-right: 1px solid #eaeaea;cursor: pointer;    }
+.widget-nav li.active{background-color: #fff;color: #666;font-weight: bold;cursor: default; }
+/*.widget-nav li:last-child{border: none;}*/
+.widget-navcontent{clear: both;position: relative;}
+.widget-navcontent .item{padding: 15px;width: 100%;position: absolute;left: 100%;opacity: 0}
+.widget-navcontent .item.active{left: 0;opacity: 1}
+.widget-navcontent .item-01 li{margin-bottom: 12px;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;font-size: 12px;}
+.widget-navcontent .item-01 li a span{color: #FF5E52;}
+.widget-navcontent .item-01 li a:hover span{color: #45B6F7;}
+.widget-navcontent .item-01 time{float: right;color: #bbb;margin-left: 10px;}
+.widget-navcontent .item-01 li:first-child a{font-weight: bold;}
+
+.widget-navcontent .item-02 dl{padding: 10px 0 0 80px;overflow: hidden;margin-bottom: 20px;}
+.widget-navcontent .item-02 dt{float: left;margin-left: -70px;}
+.widget-navcontent .item-02 dd{padding-top: 6px;font-size: 16px;}
+.widget-navcontent .item-02 dd .text-muted{font-size: 14px;display: block;height: 20px;overflow: hidden;}
+.widget-navcontent .item-02 .avatar{border: 2px solid #e6e6e6;border-radius: 100px;width: 50px;height: 50px;}
+.widget-navcontent .item-02 ul{overflow: hidden;font-size: 12px;padding-left: 82px;color: #999;}
+.widget-navcontent .item-02 li{float: left;width: 50%;margin-bottom: 10px;}
+.widget-navcontent .item-02 p{text-align: center;}
+.widget-navcontent .item-02 h4{text-align: center;font-size: 20px;line-height: 20px;margin: 25px 0;}
+
+.widget-navcontent .item-03{text-align: center;}
+.widget-navcontent .item-03 h2{font-size: 20px;line-height: 32px;margin: 10px 0;}
+.widget-navcontent .item-03 strong{font-weight: normal;color: #FF5E52;}
+
+.widget-navcontent .item-04{text-align: center;}
+.widget-navcontent .item-04 h2{font-size: 20px;line-height: 40px;margin: 20px 0;}
+
+.widget ul {
+    *zoom: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.widget ul ul {
+    border: none;
+}
+.widget ul:before,
+.widget ul:after {
+    display: table;
+    content: "";
+    line-height: 0
+}
+.widget ul:after {
+    clear: both
+}
+
+.widget-notip h3 {
+    margin-bottom: 13px
+}
+.widget_views li,
+.widget_rss li,
+.widget_recent_entries li {
+    border-bottom: solid 1px #eee;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+.widget_links ul {
+    padding: 10px 0 10px 15px;
+    color: #999;
+    font-size: 14px;
+}
+.widget_links li {
+    width: 50%;
+    float: left;
+    padding: 0;
+    border-bottom: none;
+    margin-bottom: 8px;
+    line-height: 22px;
+    height: 22px;
+    overflow: hidden;
+}
+.widget_links li a {
+    color: #777;
+    margin-right: 15px;
+}
+.widget_links li a:hover {
+    color: #45B6F7;
+}
+.widget_pages ul {
+    padding: 10px 15px 5px;
+    overflow: hidden
+}
+.widget_pages li {
+    float: left;
+    width: 50%;
+    margin-bottom: 5px;
+}
+.widget_recent_entries span {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    margin-top: 2px;
+}
+
+.widget_ui_statistics ul{overflow: hidden;padding: 15px;line-height: 26px;color: #888;}
+.widget_ui_statistics li{float: left;width: 50%;}
+.widget_ui_statistics li strong{color: #555555;}
+
+/* widget_ui_textads ======================================================================================================== */
+.widget_calendar {
+    overflow: hidden;
+    padding: 15px;
+}
+#calendar_wrap {
+    margin: 0 0 10px;
+}
+.widget_calendar table {
+    width: 100%;
+    text-align: center;
+}
+.widget_calendar table caption {
+    margin-bottom: 5px;
+    font-size: 18px;
+
+}
+.widget_calendar table #prev a,
+.widget_calendar table #next a {
+    display: block;
+    padding: 0 10px
+}
+.widget_calendar table #prev {
+    text-align: left
+}
+.widget_calendar table #next {
+    text-align: right
+}
+.widget_calendar table tbody td,
+.widget_calendar table tfoot td,
+.widget_calendar table thead th {
+    padding: 5px 3px;
+    border: 1px solid #eee;
+}
+.widget_calendar table thead th {
+    background-color: #fbfbfb;
+    text-align: center;
+}
+.widget_calendar table tbody td a {
+    display: block;
+    margin: 0 3px;
+    background-color: #428BCA;
+    color: #fff
+}
+.widget_calendar table tbody td a:hover {
+    background-color: #357EBD;
+}
+.widget_categories {
+}
+.widget_categories ul {
+    overflow: hidden;
+    padding: 15px;
+    color: #999;
+}
+.widget_categories li .children{
+    margin-top: 10px;
+}
+.widget_categories li {
+    margin-bottom: 7px;
+    list-style: disc;
+    margin-left: 20px;
+}
+.widget_categories li a {
+    color: #777;
+}
+.widget_categories li a:hover {
+    color: #45B6F7;
+}
+.widget_categories li ul {
+    padding: 0 0 0 15px
+}
+.widget_categories li li {
+    float: none;
+    width: auto
+}
+.postform{
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+/* widget_ui_textads ======================================================================================================== */
+.widget_nav_menu ul {
+    padding: 10px 15px 5px;
+    color: #999;
+}
+.widget_nav_menu ul li {
+    margin-bottom: 7px;
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* widget_ui_textads ======================================================================================================== */
+.widget_rss ul {
+    color: #999;
+}
+.widget_meta ul {
+    padding: 15px;
+    color: #999;
+}
+.widget_meta ul li {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+/* widget_ui_textads ======================================================================================================== */
+.widget_ui_asb {
+
+}
+.widget_ui_asb img {
+    display: block
+}
+.widget_ui_asb .item {
+    position: relative;
+    overflow: hidden
+}
+.widget_ui_asb .sell {
+    display: block;
+    border: solid 1px #d6d6d6;
+    color: #999;
+    text-align: center;
+    height: 123px;
+    line-height: 123px;
+    font-weight: bold
+}
+.widget_ui_asb .sell:hover {
+    border-color: #bbb;
+    color: #777777
+}
+
+/* widget_ui_textads ======================================================================================================== */
+.widget_ui_readers ul {
+    padding: 10px 0 15px 15px;
+}
+.widget_ui_readers li {
+    width: 36px;
+    height: 36px;
+    float: left;
+    margin: 6px 6px 0 0
+}
+.widget_ui_readers li a {
+    display: block
+}
+.widget_ui_readers li a, .widget_ui_readers li a:hover {
+    color: #fff
+}
+.widget_ui_readers li:hover {
+    z-index: 20
+}
+.widget_ui_readers li:hover .avatar-popup {
+    display: block
+}
+.widget_ui_readers .avatar {
+    width: 100%;
+    height: 100%
+}
+
+/* widget_ui_textads ======================================================================================================== */
+.widget_ui_comments ul a {
+    padding: 10px 15px 10px 61px;
+    display: block;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    position: relative;
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+}
+.widget_ui_comments ul li:last-child a {
+    border-bottom: none;
+}
+.widget_ui_comments ul a:hover {
+    color: #999;
+    background-color: #fbfbfb;
+}
+.widget_ui_comments strong {
+    color: #45B6F7;
+}
+.widget_ui_comments .avatar {
+    float: left;
+    width: 36px;
+    height: 36px;
+    margin: 3px 0 0 -46px;
+    border-radius: 50%
+}
+
+/* widget_ui_textads ======================================================================================================== */
+.widget_ui_textasb {
+    border: none;
+    border-radius: 0
+}
+.widget_ui_textasb a {
+    display: block;
+    padding: 0 15px 15px;
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.widget_ui_textasb a h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 14px;
+}
+.widget_ui_textasb a p {
+    color: #999;
+    margin-bottom: 0;
+}
+.widget_ui_textasb a strong {
+    margin: -1px 0 0 0;
+    display: inline-block;
+    padding: 4px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+.widget_ui_textasb a:hover {
+}
+
+.widget_ui_textasb a.style01{color: #428BCA;}
+.widget_ui_textasb a.style01:hover{border-color: #428BCA;}
+.widget_ui_textasb a.style01 strong{background-color: #428BCA;}
+
+.widget_ui_textasb a.style02{color: #FF5E52;}
+.widget_ui_textasb a.style02:hover{border-color: #FF5E52;}
+.widget_ui_textasb a.style02 strong{background-color: #FF5E52;}
+
+.widget_ui_textasb a.style03{color: #5CB85C;}
+.widget_ui_textasb a.style03:hover{border-color: #5CB85C}
+.widget_ui_textasb a.style03 strong{background-color: #5CB85C;}
+
+.widget_ui_textasb a.style04{color: #C35BFF;}
+.widget_ui_textasb a.style04:hover{border-color: #C35BFF;}
+.widget_ui_textasb a.style04 strong{background-color: #C35BFF;}
+
+.widget_ui_textasb a.style05{color: #45B6F7;}
+.widget_ui_textasb a.style05:hover{border-color: #45B6F7;}
+.widget_ui_textasb a.style05 strong{background-color: #45B6F7;}
+
+
+/* widget_ui_tags ======================================================================================================== */
+.widget_ui_tags .items {
+    overflow: hidden;
+    padding: 15px 0 12px 15px;
+}
+.widget_ui_tags .items a {
+    color: #999;
+    background-color: #f6f6f6;
+    float: left;
+    width: 31.3333%;
+    margin: 0 1% 1% 0;
+    padding: 0 8px;
+    font-size: 12px;
+    height: 29px;
+    line-height: 29px;
+    overflow: hidden;
+}
+.widget_ui_tags .items a:hover {
+    color: #fff;
+    background-color: #45B6F7;
+}
+
+/* widget_ui_posts ======================================================================================================== */
+.widget_ui_posts li:last-child a {
+    border-bottom: none;
+}
+.widget_ui_posts li a {
+    padding: 10px 15px 10px 150px;
+    color: #888;
+    border-bottom: solid 1px #eee;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    font-size: 14px
+}
+.widget_ui_posts li a:hover {
+    background-color: #fbfbfb;
+}
+.widget_ui_posts li a:hover .text {
+    color: #45B6F7;
+}
+.widget_ui_posts .text {
+    display: block;
+}
+.widget_ui_posts .text span{
+    color: #FF5E52;
+}
+.widget_ui_posts a:hover .text span{
+    color: #45B6F7;
+}
+.widget_ui_posts .thumbnail {
+    float: left;
+    margin-left: -135px
+}
+.widget_ui_posts .thumbnail img {
+    width: 122px;
+    height: 86px
+}
+.widget_ui_posts .muted {
+    margin-right: 15px;
+    font-size: 12px;
+    color: #bbb;
+}
+.widget_ui_posts .nopic li a {
+    padding: 10px 15px;
+}
+.widget_ui_posts .nopic .text {
+    margin-top: 0;
+    color: #888;
+}
+.widget_ui_posts .nopic .text:hover {
+    color: #45B6F7;
+}
+
+
+/* widget_meta ======================================================================================================== */
+.widget_meta .widget_tit {
+    margin: 0 0 10px
+}
+.widget_meta ul {
+    line-height: 24px
+}
+.widget_meta ul a {
+    color: #777
+}
+.widget_meta ul a:hover {
+    color: #45B6F7
+}
+
+
+/* widget_archive ======================================================================================================== */
+.widget_archive ul {
+    padding: 15px 0 15px 15px;
+    font-size: 14px;
+    overflow: hidden;
+    color: #999;
+}
+.widget_archive li {
+    width: 50%;
+    float: left;
+    margin-bottom: 7px;
+}
+.widget_archive li a {
+    margin-right: 15px;
+}
+.widget_archive select,
+.widget_categories select {
+    margin-top: 10px;
+    width: 91%;
+    margin-left: 15px;
+    height: 32px;
+    line-height: 32px;
+    padding: 2px
+}
+
+
+
+/* tagcloud ======================================================================================================== */
+.tagcloud {
+    padding: 10px 10px 15px 15px;
+}
+.tagcloud a {
+    display: inline-block;
+    margin: 7px 7px 0 0;
+    color: #777;
+}
+.tagcloud a:hover {
+    color: #45B6F7;
+}
+
+/* textwidget ======================================================================================================== */
+.textwidget {
+    padding: 15px;
+    color: #777;
+}
+.textwidget a {
+    color: #777;
+}
+.textwidget a:hover {
+    color: #45B6F7;
+}
+
+
+/*  ======================================================================================================== */
+
+.sign {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /*background-color:rgba(48,58,65,0.9);*/
+    z-index: 999;
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+    -ms-perspective: 500px;
+    -o-perspective: 500px;
+    perspective: 500px;
+    -webkit-transition:all 0.3s;
+    -moz-transition:all 0.3s;
+    -ms-transition:all 0.3s;
+    -o-transition:all 0.3s;
+    transition:all 0.3s;
+    opacity: 0.0;
+    visibility: hidden;
+    overflow: auto;
+}
+.sign-mask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #313B43;
+    opacity: 0.90;
+    filter:alpha(opacity=90);
+}
+.sign .container {
+    background-color:#e7ebef;
+    width:400px;
+    position: absolute;
+    height: 360px;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 9;
+    margin:auto;
+    -webkit-transition:all 0.3s;
+    -moz-transition:all 0.3s;
+    -ms-transition:all 0.3s;
+    -o-transition:all 0.3s;
+    transition:all 0.3s;
+    -webkit-transform: rotateX(-20deg) translateZ(200px) translateY(20%);
+    -moz-transform: rotateX(-20deg) translateZ(200px) translateY(20%);
+    -ms-transform: rotateX(-20deg) translateZ(200px) translateY(20%);
+    -o-transform: rotateX(-20deg) translateZ(200px) translateY(20%);
+    transform: rotateX(-20deg) translateZ(200px) translateY(20%);
+}
+.sign .close-link {
+    color:#fff;
+    position: absolute;
+    left: 100%;
+    top:0;
+    padding:22px 0;
+    font-size: 18px;
+    background-color: #45B6F7;
+    display: block;
+    opacity: 0.85;
+    filter:alpha(opacity=85);
+    width: 70px;
+    text-align: center;
+}
+.sign .close-link:hover {
+    color:#fff;
+    opacity: 1;
+    filter:alpha(opacity=100);
+}
+
+.sign form{
+    padding: 0 50px;
+}
+.sign h3{
+    margin: 0 -50px 20px;
+    background-color: #fff;
+    padding: 25px 50px;
+    font-size: 18px;
+    color: #45B6F7;
+}
+.sign h3 small{
+    float: right;
+    cursor: pointer;
+    color: #bbb;
+    font-size: 14px;
+    margin-top: 4px;
+}
+.sign h6{
+    margin-bottom: 15px;
+}
+.sign .sign-submit .btn{
+    float: right;
+}
+.sign .sign-submit label{
+    margin-top: 8px;
+    font-weight: normal;
+    font-size: 12px;
+}
+.sign .sign-submit label input{
+    position: relative;
+    top: 2px;
+    margin-right: 4px;
+}
+
+.sign-tips{
+    position: absolute;
+    bottom: 0;
+    background-color: #FD6E6E;
+    left: 0;
+    right: 0;
+    height: 0;
+    line-height: 29px;
+    padding: 0 50px;
+    color: #fff;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+
+.sign-show .sign {
+    opacity: 1.0;
+    visibility: visible;
+}
+.sign-show .sign .container {
+    -webkit-transform: rotateX(-0deg) translateZ(0) translateY(0%);
+    -moz-transform: rotateX(-0deg) translateZ(0) translateY(0%);
+    -ms-transform: rotateX(-0deg) translateZ(0) translateY(0%);
+    -o-transform: rotateX(-0deg) translateZ(0) translateY(0%);
+    transform: rotateX(-0deg) translateZ(0) translateY(0%);
+}
+body.sign-show {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/*  ======================================================================================================== */
+
+.footer{
+    position: relative;
+    z-index: 9;
+    clear: both;
+    padding: 40px 30px;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: #999;
+    background-color: #fff;
+    border-top: 1px solid #eaeaea;
+    /*box-shadow: 1px 0 4px rgba(0,0,0,0.04)*/
+}
+
+.footer a{
+    color: #999;
+}
+.footer a:hover{
+    color: #666;
+}
+
+.footer-menu{
+    text-align: left;
+    margin: 0 -2% 30px 0;
+    padding-bottom: 30px;
+    overflow: hidden;
+    border-bottom: 1px solid #494949;
+}
+.footer-menu dl{
+    width: 14.666666666%;
+    margin: 0 2% 0 0;
+    display: inline-block;
+    vertical-align: top;
+}
+.footer-menu dt{
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    height: 25px;
+    overflow: hidden;
+    text-overflow:ellipsis; white-space:nowrap;
+}
+.footer-menu dd a{
+    display: block;
+    line-height: 20px;
+    padding: 0 5px 0 24px;
+    margin: 5px 0;
+}
+
+.footer-menu .fa-weibo,
+.footer-menu .fa-tencent-weibo,
+.footer-menu .fa-envelope-o,
+.footer-menu .fa-rss{width: 12px;text-align: center;}
+
+
+/*  ======================================================================================================== */
+.container-page{padding-left: 215px;}
+.container-page .article-header{padding: 0 ;}
+.container-page .content{margin-right: 0;padding: 20px;border: 1px solid #eaeaea;background-color: #fff;border-radius: 4px;}
+
+.container-no-sidebar .content{margin-right: 0;padding: 15px 30px 20px;border: 1px solid #eaeaea;background-color: #fff;border-radius: 4px;}
+.container-no-sidebar .article-content{margin-bottom: 50px;overflow: hidden;}
+
+.pageside{position: absolute;top: 0;left: 0;width: 200px;}
+/*.pagemenus{position: fixed;width: 200px;}*/
+
+.pagemenu{list-style: none;margin: 0 0 15px;padding: 0; background-color: #fff;border-radius: 4px;overflow: hidden;}
+.pagemenu li{margin-bottom: -1px;}
+.pagemenu li a{display: block;padding: 12px 20px;font-size: 16px;color: #999;border: 1px solid #eee;background-color: #fff;}
+.pagemenu li a:hover{color: #666;}
+.pagemenu li.active{position: relative;z-index: 2}
+.pagemenu li.active a{color: #fff;background-color: #45B6F7;border: none;}
+.pagemenu li:last-child {margin-bottom: 0;}
+.pagemenu li:last-child a{border-radius: 0 0 4px 4px;}
+.pagemenu li .glyphicon {font-size: 14px;}
+
+.pagemenu h4{margin: 0;}
+.pagemenu h4 a{color: #666;background-color: #F9F9F9;padding-top: 15px;cursor: default;border-bottom-color: #e6e6e6;}
+
+
+
+
+
+.pageheader{overflow: hidden;background-color: #45B6F7;padding: 25px 20px;margin-bottom:15px;color: #fff;}
+.pageheader h1{font-size: 30px;margin:0}
+.pageheader h1 small{color: #fff;font-size: 12px;margin-left: 10px;position: relative;top: -4px;}
+.pageheader .note{margin-top: 5px;}
+.pageheader p{margin-bottom: 0;}
+.pageheader .share{float: right;height:28px;margin: 17px 0 0;color: #fff;}
+.pageheader .share a{width: 28px;height: 28px;background-color: #FFF;border: solid 2px #FFF;border-radius: 4px;opacity: .9;top: 0;display: inline-block;margin-right: 5px;margin-bottom: -8px;position: relative;}
+.pageheader .share .bds_count{border-left-color: #fff;}
+
+.pageheader-mini{padding: 15px 0 13px;}
+.pageheader-mini h1{font-size: 18px;}
+.pageheader-mini .share{margin: -5px 0;}
+
+/*  ======================================================================================================== */
+
+
+
+
+
+
+
+
+
+/*  ======================================================================================================== */
+
+.page-template-pagesthemes-php .pageheader{margin-top: -15px}
+
+#themes .item{
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 20px 300px 20px 260px;
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    overflow: hidden;
+}
+#themes .item .focus{
+    float: left;
+    margin-left: -240px;
+}
+#themes .item .thumb{
+    width: 220px;
+    height: 150px;
+}
+#themes .item .buy{
+    float: right;
+    margin-right: -300px;
+    width: 300px;
+    text-align: center;
+    border-left: 1px solid #eee;
+    padding-bottom: 30px;
+}
+#themes .item .buy dfn{
+    font-size: 24px;
+    display: block;
+    padding: 20px 0 10px;
+    color: #000;
+    font-style: normal;
+    color: #FF5E52;
+}
+#themes .item .buy dfn small{
+    font-size: 18px;
+    margin-right: 2px;
+}
+#themes .item h2{
+    font-size: 20px;
+    margin: -20px -300px 20px -260px;
+    padding: 12px 20px;
+    border-bottom: 1px solid #E9E9E9;
+    background-color: #F9F9F9;
+}
+#themes .item h2 small{
+    font-size: 12px;
+    color: #999;
+    margin-left: 20px;
+}
+
+#themes .item .desc dl{
+    overflow: hidden;
+    margin: 0 0 4px;
+    float: left;
+    padding-left: 85px;
+    font-size: 12px;
+}
+#themes .item .desc dt{
+    float: left;
+    margin-left: -85px;
+    text-align: right;
+    width: 80px;
+    background-color: #f1f1f1;
+    padding: 5px 6px;
+    /*display: inline-block;*/
+}
+#themes .item .desc dd{
+    padding: 5px 0;
+    color: #888;
+    /*float: left;*/
+    /*display: inline;*/
+    margin-right: 30px;
+}
+#themes .item .desc dd.wd{
+    width: 100px;
+}
+
+
+
+/*  ======================================================================================================== */
+
+
+.plinks{overflow:hidden;}
+.plinks .linkcat{margin-bottom: 50px;}
+.plinks h2{border-bottom:solid 1px #eee;font-size: 20px;padding-bottom: 5px;}
+.plinks ul{clear: both;overflow: hidden;}
+.plinks ul li{width:20%;float:left;}
+.plinks ul li a{display:block;padding:0 10px;height: 38px;line-height: 38px;overflow:hidden;border: 1px solid #eaeaea;margin: 10px 10px 0 0;}
+.plinks ul li img{float: left;width: 16px;height: 16px;margin-right: 8px;margin-top: 10px;}
+.plinks ul li a:hover{border-color: #45B6F7;}
+
+
+.readers{overflow: hidden;}
+.readers a{width: 72px;margin: 0 5px 25px 5px;float: left;text-align: center;color: #999;font-size: 12px;height: 60px;overflow: hidden;text-decoration: none;}
+.readers a:hover{color: #FF5E52;}
+.readers .avatar{border-radius: 5px;margin: 0 auto;display: block;margin-bottom: 5px;width: 36px;height: 36px;}
+.readers a.item-top{width: 31.222222%;margin:0 1% 30px;text-align: left;height: 100px;color: #bbb;background-color: #f6f6f6;border-radius:5px;padding: 10px;}
+.readers a.item-top .avatar{float: left;margin-left: 10px;margin-right: 10px;}
+.readers a.item-top h4{color: #FF5E52;font-size: 16px;}
+.readers a.item-top strong{display: block;color: #666;}
+.readers a.item-top:hover{background-color: #f1f1f1;}
+.readers a.item-2 h4{color: #7CCD38;}
+.readers a.item-3 h4{color: #52BAF5;}
+
+.archives .item{overflow: hidden;margin-bottom: 20px;border-bottom: 1px solid #eee;}
+.archives h3{float: left;margin-bottom:10px;font-size: 20px;font-weight: normal;color: #F15A23;line-height: 20px;margin-top: 0;}
+.archives-list{padding-left: 20px;margin: 0 0 20px 140px;}
+.archives-list li{list-style: disc;margin-left: 20px;margin-bottom: 4px;}
+.archives-list time{width: 40px;display: inline-block;}
+.archives-list span{font-size: 12px;display: inline-block;margin-left: 10px;}
+
+
+.page .content.resetpass{padding: 20px;text-align: center;margin-right: 0;background-color: #fff;border: 1px solid #EAEAEA;border-radius: 4px;}
+.resetpass form{width: 300px;margin: 0 auto;text-align: left;}
+.resetpass form p{margin-bottom: 20px;}
+.resetpass h1{font-size: 24px;font-weight: normal;}
+.resetpass h3{color: #777;}
+.resetpass h3 .glyphicon{top: 4px;}
+.resetpasssteps{margin-bottom: 50px;overflow: hidden;}
+.resetpasssteps li{width: 33.33333%;float: left;background-color: #eee;color: #666;line-height: 33px;position: relative;}
+.resetpasssteps li.active{background-color: #45B6F7;color: #fff;}
+.resetpasssteps li .glyphicon{position: absolute;right: -17px;top:-10px;font-size: 46px;color: #fff;z-index: 2}
+.errtip{background-color: #FCEAEA;color: #DB5353;padding: 8px 15px;font-size: 14px;border: 1px solid #FC9797;border-radius: 5px}
+
+.post-linkto{text-align: center;margin-bottom: 30px;}
+
+
+.prettyprint,
+pre.prettyprint {
+    background-color: #272822;
+    border: none;
+    overflow: hidden;
+    padding: 10px 15px;
+}
+.prettyprint.linenums,
+pre.prettyprint.linenums {
+    -webkit-box-shadow: inset 40px 0 0 #39382E, inset 41px 0 0 #464741;
+    -moz-box-shadow: inset 40px 0 0 #39382E, inset 41px 0 0 #464741;
+    box-shadow: inset 40px 0 0 #39382E, inset 41px 0 0 #464741;
+}
+.prettyprint.linenums ol,
+pre.prettyprint.linenums ol {
+    margin: 0 0 0 30px;
+}
+.prettyprint.linenums ol li,
+pre.prettyprint.linenums ol li {
+    padding-left: 12px;
+    color: #bebec5;
+    line-height: 20px;
+    margin-left: 0;
+    list-style: decimal;
+    margin-bottom: 0;
+}
+.prettyprint .com { color: #93a1a1; }
+.prettyprint .lit { color: #AE81FF; }
+.prettyprint .pun,
+.prettyprint .opn,
+.prettyprint .clo { color: #F8F8F2; }
+.prettyprint .fun { color: #dc322f; }
+.prettyprint .str,
+.prettyprint .atv { color: #E6DB74; }
+.prettyprint .kwd,
+.prettyprint .tag { color: #F92659; }
+.prettyprint .typ,
+.prettyprint .atn,
+.prettyprint .dec,
+.prettyprint .var { color: #A6E22E; }
+.prettyprint .pln { color: #66D9EF; }
+
+
+
+
+
+
+.image-container{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.image-header{
+    margin-bottom: 30px;
+}
+.image-title{
+    margin: 0 0 10px;
+}
+.image-meta{
+    color: $gray;
+}
+.image-content img{
+    height: auto;
+}
+.image-navigation{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.image-navigation a{
+    padding: 7px 15px;
+    display: inline-block;
+    border-radius: 2px;
+    background-color: #444;
+    opacity:1;
+    color: #fff;
+}
+.image-navigation a:hover{
+    opacity:0.8;
+}
+.image-caption, .image-description{
+    margin: 0 auto 30px;
+    max-width: 600px;
+}
+
+
+
+.flinks{overflow: hidden;}
+.flinks strong{margin-right: 5px;}
+.flinks ul{display: inline-block;margin: 0;padding: 0;}
+.flinks ul li{display: inline-block;margin-right: 15px;margin-bottom: 20px;}
+
+
+.wp-video, .mejs-layer, video, embed, iframe{max-width: 100%;display: block;}
+.article-content .wp-video, .article-content .mejs-layer, .article-content video, .article-content embed, .article-content iframe{margin: 0 auto 16px;}
+// .p_indent .article-content p iframe{margin-left: -30px;}
+
+
+
+.article-paging{text-align: center;font-size: 12px;overflow: hidden;clear: both;padding: 20px 0;}
+.article-paging span{display: inline-block;padding: 6px 12px;background-color: #ddd;border: 1px solid #ddd;color: #666;border-radius: 2px;}
+.article-paging a span{background-color: #fff;color: #666;}
+.article-paging a:hover span{border-color: #ccc;background-color: #fbfbfb;}
+
+
+.nav-fixed .header .topbar{display: none;}
+.nav-fixed .header{position: fixed;top: 0;left: 0;right: 0;padding: 15px 0;z-index: 999}
+.nav-fixed .site-navbar{margin-top: 5px;}
+
+
+.m-icon-nav{display: none;}
+.m-mask{display: none;}
+.m-navbar{display: none;}
+
+.header,
+.site-navbar,
+.site-search,
+.m-icon-nav,
+.widget-navcontent .item,
+.site-nav .fa-angle-down,
+.rollbar li
+, .rollbar h6
+, .btn
+, .search-btn
+, a
+{
+    -webkit-transition:all 0.25s;
+    -moz-transition:all 0.25s;
+    -ms-transition:all 0.25s;
+    -o-transition:all 0.25s;
+    transition:all 0.25s;
+}
+
+
+/*  ======================================================================================================== */
+
+@media (max-width: 1320px) {
+    .menusns .sub-menu{right: 0;left:auto;}
+}
+@media (max-width: 1240px) {
+    .container{margin: 0 15px;}
+    .pageheader{padding: 15px 0;}
+}
+
+@media (max-width: 1024px) {
+    .content{margin-right: 0;}
+    .sidebar{display: none;}
+    .site-search-form{padding: 25px 0;}
+    .navto-nav, .navto-design{display: none;}
+    .brand{display: none;}
+
+    .container-page{padding-left: 185px;}
+    .pageside{width: 170px;}
+
+    .plinks ul li{width: 25%;}
+}
+
+@media (max-width: 860px) {
+    .topmenu{display: none;}
+
+    .pageheader h1{font-size: 22px;}
+    .pageheader .share{display: none;}
+
+    .container-page{padding-left: 155px;}
+    .pageside{width: 140px;}
+    .pagemenu li a{padding: 10px 5px 10px 15px;}
+
+    .tag-clouds a{width: 24%}
+
+    .archives h3{float: none;}
+    .archives-list{margin-left: 0;}
+
+    .plinks ul li{width: 33.3333333%;}
+}
+
+@media (max-width: 720px) {
+    body{padding-top:77px;}
+
+    .header{position: fixed;top: 0;left: 0;right: 0;text-align: center;padding: 15px 0;z-index: 9999;height: 62px;}
+    .header .container{margin: 0; }
+
+    .logo{float: none;text-align: center;max-width: 100%;}
+    .logo a{max-width: 180px;margin: 0 auto;text-align: center;}
+    .logo img{margin: 0 auto}
+
+    .topbar{display: none;}
+
+    .topbar-user{display: none; }
+
+    .site-navbar > li[id]{display: none;}
+
+    .m-navbar{margin: 0 0; position: fixed;top:0;left: -70%;bottom:0;height: 100%;background-color: #293038;text-align: left;padding: 0;line-height: 32px;font-size: 16px;width: 70%;z-index:99999;display: block;overflow-y: auto;
+        -webkit-transition:left 0.3s;
+        -moz-transition:left 0.3s;
+        -ms-transition:left 0.3s;
+        -o-transition:left 0.3s;
+        transition:left 0.3s;
+    }
+    .m-navbar li{float: none;text-align: ; margin-left: 0;}
+    .m-navbar .sub-menu{position: relative;top: 0;box-shadow:none;background-color:transparent;border:none;border-radius:0;width: auto;margin: 0 0 0 25px;font-size: 14px;padding: 0;font-weight: normal;}
+    .m-navbar .fa{width: 18px;display: inline-block;text-align: center;}
+    .m-navbar li a{display: block;margin:0 20px;padding: 10px 10px;color: #eee;border-bottom: 1px solid #303C4A;}
+    .m-navbar li:hover > a, .m-navbar li a:hover, .m-navbar li.current-menu-item > a, .m-navbar li.current-menu-parent > a{color: #fff;}
+    .m-navbar .navto-search{display: none;}
+
+    /*body{-webkit-transition-duration:500ms;}*/
+
+    .m-icon-nav{display:block;position:absolute;top:-15px;left:0;font-size: 19px;padding: 21px 30px 21px 15px;color: #999;}
+
+    .m-nav-show{ /* -webkit-transform:translate3d(70%,0px,0px); */  position: fixed;top: 0;right: 0;left: 0;bottom: 0;height: 100%;width: 100% }
+    .m-nav-show .m-navbar{left: 0;}
+    /*.m-nav-show .header{position: absolute;}*/
+    .m-nav-show .m-mask{display: block;position: fixed;top: 0;right: 0;left: 0;bottom: 0;background-color: rgba(0,0,0,0.5);z-index: 99998;overflow: hidden;}
+    .m-nav-show .m-icon-nav{color: #45B6F7;}
+
+
+    .site-search{top: -100px;}
+    .search .site-search{top: 0}
+    .site-navbar li.navto-search{position: absolute;top: -15px;right: 0;border-bottom: none;}
+    .site-navbar li.navto-search a{padding: 15px 15px 15px 30px;color: #999999;border-bottom: none;margin: 0}
+    .site-nav .navto-search .fa{display: block;font-size: 19px;}
+    .search-on .site-search{top: 62px;}
+
+    .pageheader, .page-template-pagesnavs-php .pageheader{margin-top: -15px;}
+
+    .tag-clouds a{width: 32.3333333%}
+    .readers a.item-top{float: none;width: auto;display: block;margin: 0 0 15px 0;}
+
+    .flinks{display: none;}
+
+}
+
+@media (max-width: 640px) {
+    body{padding-top:67px;}
+    .header{padding: 15px 0;height: 56px;}
+    .logo a{height: 24px;}
+    .logo img{height: 100%;}
+
+    .m-icon-nav{padding: 14px 30px 13px 15px;top: -10px;}
+    .site-navbar li.navto-search a{padding: 18px 15px 13px 30px}
+
+    .search-on .site-search{top: 46px;}
+
+    .carousel-control{display: none;}
+
+    .article-header{text-align: left;padding: 15px 0;}
+    .article-title{font-size: 18px;font-weight: bold;margin-bottom: 5px;line-height: 22px;}
+    .article-meta .item{margin-right: 10px;}
+    .asb-post{margin-bottom: 15px;}
+    .article-content img{border-radius: 5px;}
+
+    .post-copyright{display: none;}
+    .action-share{text-align: left;}
+    .article-tags{text-align: left;}
+
+    .rollbar{right: -120px;}
+    .article-content{font-size: 15px;line-height: 24px;}
+    .article-content p,
+    .article-content h2,
+    .article-content h3,
+    .article-content h4{margin-bottom: 15px;}
+    .article-content h2{font-size: 16px;font-weight: bold;margin: 15px -10px 15px -10px;line-height: 18px;padding-left: 10px;border-left:none}
+    .article-content ul, .article-content ol{margin-left:20px;}
+
+    .content{min-height: 200px;}
+
+    /*.pagetitle{padding: 10px 10px 6px;}*/
+    .pagetitle h1{font-size: 16px;font-weight: bold;}
+
+    .excerpt{padding: 10px 10px 10px 180px;}
+
+    .excerpt .focus{width: 160px;margin-left: -170px;}
+    .excerpt .thumb{width: 160px;height: 109px;}
+    .excerpt .note{display: none;}
+    .excerpt .cat{display: none;}
+    .excerpt h2, .excerpt-minic h2{font-size: 16px;line-height: 18px;}
+
+    .excerpt-minic{padding: 10px;}
+    .excerpt-minic-index h2{font-size: 16px;margin-bottom: 5px;}
+    .excerpt-minic .note{font-size: 12px;text-indent: 24px;}
+
+    .excerpt-text{padding-left: 10px;}
+    .excerpt-text .meta{margin-bottom: 0;}
+
+    .pageheader, .page-template-pagesnavs-php .pageheader{margin-top: -11px;}
+    .pageheader h1{font-weight: bold;font-size: 18px;}
+    .pageheader .note{font-size: 12px;}
+
+    .container-page{padding-left: 110px;}
+    .container-page .content{padding: 15px;}
+    .container-page .content::after{display: none;}
+    .pageside{width: 100px;}
+    .pagemenu{margin-bottom: 5px;}
+    .pagemenu li a{padding: 7px 10px;font-size: 14px;font-weight: bold;}
+
+
+    .branding{padding: 30px 15px;}
+    .branding h1, .branding h2{font-size: 20px;margin-bottom: 10px;}
+
+    .btn-lg{font-size: 14px;padding: 6px 15px;border-radius: 2px;}
+
+
+    .pagetitle h1, .pagetitle h2, .pagetitle h3{font-size:16px;font-weight:bold;}
+    .title h3{font-size:16px;}
+    .title .more{display: none;}
+
+    .footer{padding: 30px 0 20px;}
+    .footer nav{display: none;}
+
+    .footer{padding:15px 10px;}
+    .footer .container{line-height:16px;}
+
+    .archives-list span{display: none;}
+    .archives h3{font-size: 16px;font-weight: bold;}
+
+}
+
+@media (max-width: 480px) {
+    .container{margin: 0 10px;}
+    .single section.container{margin: 0;}
+    .single .content{border: none;padding: 0 15px;border-radius: 0}
+    .single{padding-top: 54px;}
+    .article-header{margin-bottom: 10px;}
+
+    /*#focusslide{margin: -11px -10px 10px;}*/
+    /*.carousel-inner .item img{border-radius: 0}*/
+    .carousel-indicators{bottom: 2px;}
+    .carousel-indicators li, .carousel-indicators li.active{width: 7px;height: 7px;margin: 0 1px;}
+
+
+    .cat-first{padding: 10px 10px 10px 170px;}
+    .cat-first .thumbnail{margin-left: -160px;width: 150px;}
+    .cat-first .note{display: none;}
+    .cat-first .meta .pc{display: none;}
+    .cat-first h2, .excerpt-minic h2{font-size: 16px;line-height: 20px;}
+
+    .cat-posts li{width: 50%;}
+    .cat-posts li a{padding: 10px;}
+    .cat-posts li:nth-child(1){border-radius: 0}
+    .cat-posts li:nth-child(1), .cat-posts li:nth-child(2){border-bottom: none;}
+    .cat-posts li:nth-child(3){border-left: 1px solid #eaeaea;border-radius: 0 0 0 4px;}
+
+    .tag-clouds a{width: 49%}
+    .plinks ul li{width: 50%;}
+
+    .page-template-pagesresetpassword-php section.container{margin: 0;}
+    .page-template-pagesresetpassword-php .content{border: none;padding: 0 15px;border-radius: 0}
+    .page-template-pagesresetpassword-php{padding-top: 44px;}
+    .page .content.resetpass{padding: 15px;}
+    .nav_fixed.page .content.resetpass{padding: 40px 15px 15px;}
+    .resetpasssteps{margin: -14px -15px 15px -15px;}
+    .resetpasssteps li{font-size: 12px;line-height: 28px;}
+    .resetpass form{width: 100%;}
+    .resetpass h3{font-size: 16px;}
+
+    .sign .container{width: 80%}
+    .sign .close-link{right: 0;left:auto;}
+    .sign form{padding: 0 20px;}
+    .sign h3{padding: 25px 20px;margin: 0 -20px 20px;}
+    .sign h3 small{margin-right: 80px;}
+
+
+    .pagination ul > li{display:none}
+    .pagination ul > li.prev-page, .pagination ul > li.next-page{display:inline}
+    .pagination ul > li.next-page a{background-color:#45B6F7;color:#fff;}
+
+    .input-lg{height: 34px;border-radius: 4px;font-size: 14px;padding: 10px;}
+
+    .excerpt{padding: 10px 10px 10px 120px;}
+    .excerpt .focus{width: 100px;margin-left: -110px;}
+    .excerpt .thumb{width: 100px;height: 68px;}
+    .excerpt .note{display: none;}
+    .excerpt .author{display: none;}
+    .excerpt .pc{text-decoration: none;}
+
+    .excerpt h2 {
+        overflow: hidden;
+        display: block;
+        position: relative;
+        min-height: 40px;
+    }
+
+
+    .excerpt-text{padding-left: 10px;}
+    .excerpt-text header{margin-bottom: 5px;}
+    .excerpt-text h2{min-height: 0;margin-bottom: 5px;}
+
+}
+@media (max-width: 360px) {
+
+    .single .content{padding: 5px 15px;}
+
+
+    .cat-ebox li{width: 100%;border-right: none;}
+    .cat-ebox li:first-child{border-bottom: 2px solid #eaeaea;}
+
+    .cat-posts li a{height: 170px;}
+
+    .article-header{padding: 10px 0;text-align: left;}
+    .article-meta .item:nth-child(2){display: none;}
+    .article-title{font-size: 16px;}
+
+
+    .excerpt h2{font-size:14px;line-height:18px;}
+    .excerpt .pc{display:none}
+    .excerpt .pv{margin-right:0;}
+
+    .btn-lg{padding:8px 20px;font-size:14px;}
+
+    #commentform{padding-left: 0;}
+    #respond{overflow: hidden;width: 100%}
+    .comt{padding-left: 0;}
+    .comt-title{width: auto;float: none;margin-left: 0;overflow: hidden;margin-bottom: 10px;}
+    .comt-avatar{width: 30px;height: 30px;float: left;margin-right: 5px;}
+    .comt-avatar .avatar{width: 30px;height: 30px;border-radius: 50%;}
+    .comt-comterinfo{width: 100%;}
+    .comt-comterinfo .text-muted{display: none;}
+    .comt-comterinfo input{width: 100%;margin-right: 0;box-shadow: none;}
+    .comment-reply-link, .comt-info{position: relative;top: 0;display: inline-block;margin-left: 10px;}
+    .comt-main{margin-right: 0;margin-left:40px;}
+    .comt-f{display: none;}
+    .commentlist > .comment .children{margin-left: 0;}
+    .commentlist > .comment.depth-1 > .children{margin-left: 46px;}
+    .comt-author{display: inline-block;}
+
+    .branding{padding: 30px 10px;}
+    .branding h1, .branding h2{font-size: 16px;font-weight: bold;margin-bottom: 10px;}
+    .branding p{font-weight:normal}
+
+    .tag-clouds a{width: 99%}
+    .plinks ul li{width: 100%;}
+}
+
+
+
+#navs{color: #aaa;}
+#navs h2{font-size: 20px;font-weight: normal;color: #fff;padding: 10px;background-color: #45B6F7;margin: 0}
+#navs .item{overflow: hidden;margin:20px 0 30px;}
+#navs .item h2{width: 140px;padding: 11px 15px;margin: 0;font-size: 18px;}
+#navs .item ul{margin-right: -1%;}
+#navs .item li{float: left;width: 19%;margin-right: 1%;margin-top: 1%;padding: 15px;font-size: 12px;height: 89px;overflow: hidden;background-color: #fff;border-bottom: 15px solid #fff;}
+#navs .item li a{margin-bottom: 5px;display: inline-block;font-size: 14px;font-weight: bold;color: #45B6F7;border-bottom: 2px solid transparent;}
+#navs .item li a:hover{color: #FD8C84;border-bottom-color: #FD8C84;}
+
+#navs .items{margin-left: 160px;}
+#navs nav{width: 140px;position: absolute;top: 0;left: 0;height:100%;background-color: #45B6F7;}
+
+#navs nav ul{width: 140px;}
+#navs nav a{display: block;padding: 10px 20px;color: #fff;border-bottom: 1px solid rgba(0,0,0,0.08);}
+#navs nav a:hover, #navs nav .active a{color: #fff;font-weight: bold;}
+#navs nav ul.affix{position: fixed;top: 0}
+#navs nav ul.affix-bottom{position: fixed;}
+
+.page-template-pagesnavs-php .pageheader{margin: 0;}
+
+@media (max-width:1280px){
+    #navs .items{margin-right: 10px;}
+}
+@media (max-width:1024px){
+    #navs .item{margin-top: 10px;}
+    #navs .items{margin: 0;}
+    #navs nav{display: none;}
+    #navs .item li{width: 24%;}
+}
+@media (max-width:640px){
+    #navs .item li{width: 32.333333%;}
+    #navs .item h2{width: auto;text-align: center;  }
+}
+@media (max-width:320px){
+    #navs .item li{width: 49%;}
+}
+
+
+    </style>
+</head>
+<body>
+<div class="content">
+                <header class="article-header">
+            <h1 class="article-title"><a href="http://www.daqianduan.com/6281.html">手机移动端WEB资源整合</a></h1>
+            <div class="article-meta">
+                <span class="item">2015-12-08</span>
+                                                <span class="item">分类：<a href="http://www.daqianduan.com/front" rel="category tag">前端开发</a></span>
+                                <span class="item post-views">阅读(64160)</span>              <span class="item">评论(7)</span>
+                <span class="item"></span>
+            </div>
+        </header>
+        <article class="article-content">
+        <h2>meta基础知识</h2>
+<p><strong>H5页面窗口自动调整到设备宽度，并禁止用户缩放页面</strong></p>
+<pre class="prettyprint"><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"viewport"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"</span><span class="pln"> </span><span class="tag">/&gt;</span></pre>
+<p><strong>忽略将页面中的数字识别为电话号码</strong></p>
+<pre class="prettyprint"><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"format-detection"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"telephone=no"</span><span class="pln"> </span><span class="tag">/&gt;</span></pre>
+<p><strong>忽略Android平台中对邮箱地址的识别</strong></p>
+<pre class="prettyprint"><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"format-detection"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"email=no"</span><span class="pln"> </span><span class="tag">/&gt;</span></pre>
+<p><strong>当网站添加到主屏幕快速启动方式，可隐藏地址栏，仅针对ios的safari</strong></p>
+<pre class="prettyprint"><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"apple-mobile-web-app-capable"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"yes"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+</span><span class="com">&lt;!-- ios7.0版本以后，safari上已看不到效果 --&gt;</span></pre>
+<p><strong>将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式</strong></p>
+<pre class="prettyprint"><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"apple-mobile-web-app-status-bar-style"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"black"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+</span><span class="com">&lt;!-- 可选default、black、black-translucent --&gt;</span></pre>
+<p><strong>viewport模板</strong><br>
+viewport模板——通用</p>
+<pre class="prettyprint"><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln">
+</span><span class="tag">&lt;html&gt;</span><span class="pln">
+</span><span class="tag">&lt;head&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"viewport"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"yes"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"apple-mobile-web-app-capable"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"black"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"apple-mobile-web-app-status-bar-style"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"telephone=no"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"format-detection"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"email=no"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"format-detection"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;title&gt;</span><span class="pln">标题</span><span class="tag">&lt;/title&gt;</span><span class="pln">
+</span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"index.css"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;/head&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;body&gt;</span><span class="pln">
+这里开始内容
+</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/html&gt;</span></pre>
+<p>viewport模板 – target-densitydpi=device-dpi，android 2.3.5以下版本不支持</p>
+<pre class="prettyprint"><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln">
+</span><span class="tag">&lt;html&gt;</span><span class="pln">
+</span><span class="tag">&lt;head&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"viewport"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"width=750, user-scalable=no, target-densitydpi=device-dpi"</span><span class="tag">&gt;</span><span class="com">&lt;!-- width取值与页面定义的宽度一致 --&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"yes"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"apple-mobile-web-app-capable"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"black"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"apple-mobile-web-app-status-bar-style"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"telephone=no"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"format-detection"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"email=no"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"format-detection"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;title&gt;</span><span class="pln">标题</span><span class="tag">&lt;/title&gt;</span><span class="pln">
+</span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"index.css"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;/head&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;body&gt;</span><span class="pln">
+这里开始内容
+</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/html&gt;</span></pre>
+<p>参考案例：<a href="http://action.weixin.qq.com/payact/readtemplate?t=mobile/2015/wxzfsht/index_tmpl" target="_blank">http://action.weixin.qq.com/payact/readtemplate?t=mobile/2015/wxzfsht/index_tmpl</a></p>
+<h2>常见问题</h2>
+<p><strong>移动端如何定义字体font-family</strong><br>
+中文字体使用系统默认即可，英文用Helvetica</p>
+<pre class="prettyprint"><span class="com">/* 移动端定义字体的代码 */</span><span class="pln">
+body</span><span class="pun">{</span><span class="pln">font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span><span class="typ">Helvetica</span><span class="pun">;}</span></pre>
+<p>参考《<a href="http://www.cnblogs.com/PeunZhang/p/3592096.html" target="_blank">移动端使用字体的思考</a>》</p>
+<p><strong>移动端字体单位font-size选择px还是rem</strong><br>
+对于只需要适配少部分手机设备，且分辨率对页面影响不大的，使用px即可</p>
+<p>对于需要适配各种移动设备，使用rem，例如只需要适配iPhone和iPad等分辨率差别比较挺大的设备</p>
+<p>rem配置参考：</p>
+<pre class="prettyprint"><span class="pln">html</span><span class="pun">{</span><span class="pln">font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">10px</span><span class="pun">}</span><span class="pln">
+</span><span class="lit">@media</span><span class="pln"> screen </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">min</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="lit">321px</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">max</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="lit">375px</span><span class="pun">){</span><span class="pln">html</span><span class="pun">{</span><span class="pln">font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">11px</span><span class="pun">}}</span><span class="pln">
+</span><span class="lit">@media</span><span class="pln"> screen </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">min</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="lit">376px</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">max</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="lit">414px</span><span class="pun">){</span><span class="pln">html</span><span class="pun">{</span><span class="pln">font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">12px</span><span class="pun">}}</span><span class="pln">
+</span><span class="lit">@media</span><span class="pln"> screen </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">min</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="lit">415px</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">max</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="lit">639px</span><span class="pun">){</span><span class="pln">html</span><span class="pun">{</span><span class="pln">font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">15px</span><span class="pun">}}</span><span class="pln">
+</span><span class="lit">@media</span><span class="pln"> screen </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">min</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="lit">640px</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">max</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="lit">719px</span><span class="pun">){</span><span class="pln">html</span><span class="pun">{</span><span class="pln">font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">20px</span><span class="pun">}}</span><span class="pln">
+</span><span class="lit">@media</span><span class="pln"> screen </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">min</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="lit">720px</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">max</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="lit">749px</span><span class="pun">){</span><span class="pln">html</span><span class="pun">{</span><span class="pln">font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">22.5px</span><span class="pun">}}</span><span class="pln">
+</span><span class="lit">@media</span><span class="pln"> screen </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">min</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="lit">750px</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">max</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="lit">799px</span><span class="pun">){</span><span class="pln">html</span><span class="pun">{</span><span class="pln">font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">23.5px</span><span class="pun">}}</span><span class="pln">
+</span><span class="lit">@media</span><span class="pln"> screen </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">min</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span><span class="lit">800px</span><span class="pun">){</span><span class="pln">html</span><span class="pun">{</span><span class="pln">font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">25px</span><span class="pun">}}</span></pre>
+<p><strong>移动端touch事件(区分webkit 和 winphone)</strong><br>
+当用户手指放在移动设备在屏幕上滑动会触发的touch事件</p>
+<p>以下支持webkit</p>
+<ul>
+<li>touchstart——当手指触碰屏幕时候发生。不管当前有多少只手指</li>
+<li>touchmove——当手指在屏幕上滑动时连续触发。通常我们再滑屏页面，会调用event的preventDefault()可以阻止默认情况的发生：阻止页面滚动</li>
+<li>touchend——当手指离开屏幕时触发</li>
+<li>touchcancel——系统停止跟踪触摸时候会触发。例如在触摸过程中突然页面alert()一个提示框，此时会触发该事件，这个事件比较少用</li>
+</ul>
+<p>TouchEvent</p>
+<ul>
+<li>touches：屏幕上所有手指的信息</li>
+<li>targetTouches：手指在目标区域的手指信息</li>
+<li>changedTouches：最近一次触发该事件的手指信息</li>
+<li>touchend时，touches与targetTouches信息会被删除，changedTouches保存的最后一次的信息，最好用于计算手指信息</li>
+</ul>
+<p>参数信息(changedTouches[0])</p>
+<ul>
+<li>clientX、clientY在显示区的坐标</li>
+<li>target：当前元素</li>
+</ul>
+<p>参考：https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent</p>
+<p>以下支持winphone 8</p>
+<ul>
+<li>MSPointerDown——当手指触碰屏幕时候发生。不管当前有多少只手指</li>
+<li>MSPointerMove——当手指在屏幕上滑动时连续触发。通常我们再滑屏页面，会调用css的html{-ms-touch-action: none;}可以阻止默认情况的发生：阻止页面滚动</li>
+<li>MSPointerUp——当手指离开屏幕时触发</li>
+</ul>
+<p>移动端click屏幕产生200-300 ms的延迟响应</p>
+<p>移动设备上的web网页是有300ms延迟的，玩玩会造成按钮点击延迟甚至是点击失效。</p>
+<p>以下是历史原因，来源一个公司内一个同事的分享：</p>
+<p>2007年苹果发布首款iphone上IOS系统搭载的safari为了将适用于PC端上大屏幕的网页能比较好的展示在手机端上，使用了双击缩放(double tap to zoom)的方案，比如你在手机上用浏览器打开一个PC上的网页，你可能在看到页面内容虽然可以撑满整个屏幕，但是字体、图片都很小看不清，此时可以快速双击屏幕上的某一部分，你就能看清该部分放大后的内容，再次双击后能回到原始状态。</p>
+<p>双击缩放是指用手指在屏幕上快速点击两次，iOS 自带的 Safari 浏览器会将网页缩放至原始比例。</p>
+<p>原因就出在浏览器需要如何判断快速点击上，当用户在屏幕上单击某一个元素时候，例如跳转链接&lt;a href=”#”&gt;&lt;/a&gt;，此处浏览器会先捕获该次单击，但浏览器不能决定用户是单纯要点击链接还是要双击该部分区域进行缩放操作，所以，捕获第一次单击后，浏览器会先Hold一段时间t，如果在t时间区间里用户未进行下一次点击，则浏览器会做单击跳转链接的处理，如果t时间里用户进行了第二次单击操作，则浏览器会禁止跳转，转而进行对该部分区域页面的缩放操作。那么这个时间区间t有多少呢？在IOS safari下，大概为300毫秒。这就是延迟的由来。造成的后果用户纯粹单击页面，页面需要过一段时间才响应，给用户慢体验感觉，对于web开发者来说是，页面js捕获click事件的回调函数处理，需要300ms后才生效，也就间接导致影响其他业务逻辑的处理。</p>
+<p>解决方案：</p>
+<ul>
+<li>fastclick可以解决在手机上点击事件的300ms延迟</li>
+<li>zepto的touch模块，tap事件也是为了解决在click的延迟问题</li>
+</ul>
+<p>触摸事件的响应顺序</p>
+<ol>
+<li>ontouchstart</li>
+<li>ontouchmove</li>
+<li>ontouchend</li>
+<li>onclick</li>
+</ol>
+<p>解决300ms延迟的问题，也可以通过绑定ontouchstart事件，加快对事件的响应</p>
+<p><strong>什么是Retina 显示屏，带来了什么问题</strong><br>
+retina：一种具备超高像素密度的液晶屏，同样大小的屏幕上显示的像素点由1个变为多个，如在同样带下的屏幕上，苹果设备的retina显示屏中，像素点1个变为4个</p>
+<p>在高清显示屏中的位图被放大，图片会变得模糊，因此移动端的视觉稿通常会设计为传统PC的2倍</p>
+<p>那么，前端的应对方案是：</p>
+<p>设计稿切出来的图片长宽保证为偶数，并使用backgroud-size把图片缩小为原来的1/2</p>
+<p>//例如图片宽高为：200px*200px，那么写法如下</p>
+<pre class="prettyprint"><span class="pun">.</span><span class="pln">css</span><span class="pun">{</span><span class="pln">width</span><span class="pun">:</span><span class="lit">100px</span><span class="pun">;</span><span class="pln">height</span><span class="pun">:</span><span class="lit">100px</span><span class="pun">;</span><span class="pln">background</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">100px</span><span class="pln"> </span><span class="lit">100px</span><span class="pun">;}</span></pre>
+<p>其它元素的取值为原来的1/2，例如视觉稿40px的字体，使用样式的写法为20px</p>
+<pre class="prettyprint"><span class="pun">.</span><span class="pln">css</span><span class="pun">{</span><span class="pln">font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">20px</span><span class="pun">}</span></pre>
+<p>参考《<a href="http://www.cnblogs.com/PeunZhang/p/3441110.html" target="_blank">高清显示屏原理及设计方案</a>》</p>
+<p>ios系统中元素被触摸时产生的半透明灰色遮罩怎么去掉</p>
+<p>ios用户点击一个链接，会出现一个半透明灰色遮罩, 如果想要禁用，可设置-webkit-tap-highlight-color的alpha值为0，也就是属性值的最后一位设置为0就可以去除半透明灰色遮罩</p>
+<pre class="prettyprint"><span class="pln">a</span><span class="pun">,</span><span class="pln">button</span><span class="pun">,</span><span class="pln">input</span><span class="pun">,</span><span class="pln">textarea</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">tap</span><span class="pun">-</span><span class="pln">highlight</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">;)}</span></pre>
+<p>部分android系统中元素被点击时产生的边框怎么去掉</p>
+<p>android用户点击一个链接，会出现一个边框或者半透明灰色遮罩, 不同生产商定义出来额效果不一样，可设置-webkit-tap-highlight-color的alpha值为0去除部分机器自带的效果</p>
+<pre class="prettyprint"><span class="pln">a</span><span class="pun">,</span><span class="pln">button</span><span class="pun">,</span><span class="pln">input</span><span class="pun">,</span><span class="pln">textarea</span><span class="pun">{</span><span class="pln">
+</span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">tap</span><span class="pun">-</span><span class="pln">highlight</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">;)</span><span class="pln">
+</span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">user</span><span class="pun">-</span><span class="pln">modify</span><span class="pun">:</span><span class="pln">read</span><span class="pun">-</span><span class="pln">write</span><span class="pun">-</span><span class="pln">plaintext</span><span class="pun">-</span><span class="pln">only</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>-webkit-user-modify有个副作用，就是输入法不再能够输入多个字符</p>
+<p>另外，有些机型去除不了，如小米2</p>
+<p>对于按钮类还有个办法，不使用a或者input标签，直接用div标签</p>
+<p>参考《<a href="http://如何去除android上a标签产生的边框" target="_blank">如何去除android上a标签产生的边框</a>》</p>
+<p>winphone系统a、input标签被点击时产生的半透明灰色背景怎么去掉</p>
+<pre class="prettyprint"><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"msapplication-tap-highlight"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"no"</span><span class="tag">&gt;</span></pre>
+<p>webkit表单元素的默认外观怎么重置</p>
+<pre class="prettyprint"><span class="pun">.</span><span class="pln">css</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">appearance</span><span class="pun">:</span><span class="pln">none</span><span class="pun">;}</span></pre>
+<p>webkit表单输入框placeholder的颜色值能改变么</p>
+<pre class="prettyprint"><span class="pln">input</span><span class="pun">::-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">input</span><span class="pun">-</span><span class="pln">placeholder</span><span class="pun">{</span><span class="pln">color</span><span class="pun">:</span><span class="com">#AAAAAA;}</span><span class="pln">
+input</span><span class="pun">:</span><span class="pln">focus</span><span class="pun">::-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">input</span><span class="pun">-</span><span class="pln">placeholder</span><span class="pun">{</span><span class="pln">color</span><span class="pun">:</span><span class="com">#EEEEEE;}</span></pre>
+<p>webkit表单输入框placeholder的文字能换行么<br>
+ios可以，android不行~</p>
+<p>在textarea标签下都可以换行~</p>
+<p>IE10（winphone8）表单元素默认外观如何重置<br>
+禁用 select 默认下拉箭头</p>
+<p>::-ms-expand 适用于表单选择控件下拉箭头的修改，有多个属性值，设置它隐藏 (display:none) 并使用背景图片来修饰可得到我们想要的效果。</p>
+<pre class="prettyprint"><span class="kwd">select</span><span class="pun">::-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">expand </span><span class="pun">{</span><span class="pln">
+display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>禁用 radio 和 checkbox 默认样式</p>
+<p>::-ms-check 适用于表单复选框或单选按钮默认图标的修改，同样有多个属性值，设置它隐藏 (display:none) 并使用背景图片来修饰可得到我们想要的效果。</p>
+<pre class="prettyprint"><span class="pln">input</span><span class="pun">[</span><span class="pln">type</span><span class="pun">=</span><span class="pln">radio</span><span class="pun">]::-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">check</span><span class="pun">,</span><span class="pln">
+input</span><span class="pun">[</span><span class="pln">type</span><span class="pun">=</span><span class="pln">checkbox</span><span class="pun">]::-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">check
+</span><span class="pun">{</span><span class="pln">
+display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>禁用PC端表单输入框默认清除按钮</p>
+<p>当表单文本输入框输入内容后会显示文本清除按钮，::-ms-clear 适用于该清除按钮的修改，同样设置使它隐藏 (display:none) 并使用背景图片来修饰可得到我们想要的效果。</p>
+<pre class="prettyprint"><span class="pln">input</span><span class="pun">[</span><span class="pln">type</span><span class="pun">=</span><span class="pln">text</span><span class="pun">]::-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">clear</span><span class="pun">,</span><span class="pln">
+input</span><span class="pun">[</span><span class="pln">type</span><span class="pun">=</span><span class="pln">tel</span><span class="pun">]::-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">clear</span><span class="pun">,</span><span class="pln">
+input</span><span class="pun">[</span><span class="pln">type</span><span class="pun">=</span><span class="pln">number</span><span class="pun">]::-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">clear
+</span><span class="pun">{</span><span class="pln">
+display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>禁止ios 长按时不触发系统的菜单，禁止ios&amp;android长按时下载图片</p>
+<pre class="prettyprint"><span class="pun">.</span><span class="pln">css</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">touch</span><span class="pun">-</span><span class="pln">callout</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">}</span></pre>
+<p>禁止ios和android用户选中文字</p>
+<pre class="prettyprint"><span class="pun">.</span><span class="pln">css</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">user</span><span class="pun">-</span><span class="kwd">select</span><span class="pun">:</span><span class="pln">none</span><span class="pun">}</span></pre>
+<p>参考《<a href="http://www.cnblogs.com/PeunZhang/p/3522603.html" target="_blank">如何改变表单元素的外观(for Webkit and IE10)</a>》</p>
+<p>打电话发短信写邮件怎么实现<br>
+打电话</p>
+<pre class="prettyprint"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"tel:0755-10086"</span><span class="tag">&gt;</span><span class="pln">打电话给:0755-10086</span><span class="tag">&lt;/a&gt;</span></pre>
+<p>发短信，winphone系统无效</p>
+<pre class="prettyprint"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"sms:10086"</span><span class="tag">&gt;</span><span class="pln">发短信给: 10086</span><span class="tag">&lt;/a&gt;</span></pre>
+<p>写邮件，可参考《<a href="http://www.cnblogs.com/PeunZhang/p/4952783.html" target="_blank">移动web页面给用户发送邮件的方法</a>》</p>
+<pre class="prettyprint"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"mailto:peun@foxmail.com"</span><span class="tag">&gt;</span><span class="pln">peun@foxmail.com</span><span class="tag">&lt;/a&gt;</span></pre>
+<p>模拟按钮hover效果<br>
+移动端触摸按钮的效果，可明示用户有些事情正要发生，是一个比较好体验，但是移动设备中并没有鼠标指针，使用css的hover并不能满足我们的需求，还好国外有个激活css的active效果，代码如下，</p>
+<pre class="prettyprint"><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln">
+</span><span class="tag">&lt;html&gt;</span><span class="pln">
+</span><span class="tag">&lt;head&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"viewport"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"yes"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"apple-mobile-web-app-capable"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"black"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"apple-mobile-web-app-status-bar-style"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"telephone=no"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"format-detection"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"email=no"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"format-detection"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;style</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/css"</span><span class="tag">&gt;</span><span class="pln">
+a</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">tap</span><span class="pun">-</span><span class="pln">highlight</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">);}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span class="pln">blue</span><span class="pun">{</span><span class="pln">display</span><span class="pun">:</span><span class="pln">block</span><span class="pun">;</span><span class="pln">height</span><span class="pun">:</span><span class="lit">42px</span><span class="pun">;</span><span class="pln">line</span><span class="pun">-</span><span class="pln">height</span><span class="pun">:</span><span class="lit">42px</span><span class="pun">;</span><span class="pln">text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;</span><span class="pln">border</span><span class="pun">-</span><span class="pln">radius</span><span class="pun">:</span><span class="lit">4px</span><span class="pun">;</span><span class="pln">font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">18px</span><span class="pun">;</span><span class="pln">color</span><span class="pun">:</span><span class="com">#FFFFFF;background-color: #4185F3;}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span class="pln">blue</span><span class="pun">:</span><span class="pln">active</span><span class="pun">{</span><span class="pln">background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#357AE8;}</span><span class="pln">
+</span><span class="tag">&lt;/style&gt;</span><span class="pln">
+</span><span class="tag">&lt;/head&gt;</span><span class="pln">
+</span><span class="tag">&lt;body&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-blue"</span><span class="tag">&gt;</span><span class="pln">按钮</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><span class="pln">
+document</span><span class="pun">.</span><span class="pln">addEventListener</span><span class="pun">(</span><span class="str">"touchstart"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(){},</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+</span><span class="tag">&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></pre>
+<p>兼容性ios5+、部分android 4+、winphone 8</p>
+<p>要做到全兼容的办法，可通过绑定ontouchstart和ontouchend来控制按钮的类名</p>
+<pre class="prettyprint"><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln">
+</span><span class="tag">&lt;html&gt;</span><span class="pln">
+</span><span class="tag">&lt;head&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"viewport"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"yes"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"apple-mobile-web-app-capable"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"black"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"apple-mobile-web-app-status-bar-style"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"telephone=no"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"format-detection"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"email=no"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"format-detection"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;style</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/css"</span><span class="tag">&gt;</span><span class="pln">
+a</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">tap</span><span class="pun">-</span><span class="pln">highlight</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> rgba</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">);}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span class="pln">blue</span><span class="pun">{</span><span class="pln">display</span><span class="pun">:</span><span class="pln">block</span><span class="pun">;</span><span class="pln">height</span><span class="pun">:</span><span class="lit">42px</span><span class="pun">;</span><span class="pln">line</span><span class="pun">-</span><span class="pln">height</span><span class="pun">:</span><span class="lit">42px</span><span class="pun">;</span><span class="pln">text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;</span><span class="pln">border</span><span class="pun">-</span><span class="pln">radius</span><span class="pun">:</span><span class="lit">4px</span><span class="pun">;</span><span class="pln">font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">18px</span><span class="pun">;</span><span class="pln">color</span><span class="pun">:</span><span class="com">#FFFFFF;background-color: #4185F3;}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span class="pln">blue</span><span class="pun">-</span><span class="pln">on</span><span class="pun">{</span><span class="pln">background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#357AE8;}</span><span class="pln">
+</span><span class="tag">&lt;/style&gt;</span><span class="pln">
+</span><span class="tag">&lt;/head&gt;</span><span class="pln">
+</span><span class="tag">&lt;body&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-blue"</span><span class="tag">&gt;</span><span class="pln">按钮</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> btnBlue </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">querySelector</span><span class="pun">(</span><span class="str">".btn-blue"</span><span class="pun">);</span><span class="pln">
+btnBlue</span><span class="pun">.</span><span class="pln">ontouchstart </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">className </span><span class="pun">=</span><span class="pln"> </span><span class="str">"btn-blue btn-blue-on"</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+btnBlue</span><span class="pun">.</span><span class="pln">ontouchend </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">className </span><span class="pun">=</span><span class="pln"> </span><span class="str">"btn-blue"</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="tag">&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></pre>
+<p>屏幕旋转的事件和样式<br>
+事件<br>
+window.orientation，取值：正负90表示横屏模式、0和180表现为竖屏模式；</p>
+<pre class="prettyprint"><span class="pln">window</span><span class="pun">.</span><span class="pln">onorientationchange </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+</span><span class="kwd">switch</span><span class="pun">(</span><span class="pln">window</span><span class="pun">.</span><span class="pln">orientation</span><span class="pun">){</span><span class="pln">
+</span><span class="kwd">case</span><span class="pln"> </span><span class="pun">-</span><span class="lit">90</span><span class="pun">:</span><span class="pln">
+</span><span class="kwd">case</span><span class="pln"> </span><span class="lit">90</span><span class="pun">:</span><span class="pln">
+alert</span><span class="pun">(</span><span class="str">"横屏:"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> window</span><span class="pun">.</span><span class="pln">orientation</span><span class="pun">);</span><span class="pln">
+</span><span class="kwd">case</span><span class="pln"> </span><span class="lit">0</span><span class="pun">:</span><span class="pln">
+</span><span class="kwd">case</span><span class="pln"> </span><span class="lit">180</span><span class="pun">:</span><span class="pln">
+alert</span><span class="pun">(</span><span class="str">"竖屏:"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> window</span><span class="pun">.</span><span class="pln">orientation</span><span class="pun">);</span><span class="pln">
+</span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>样式</p>
+<pre class="prettyprint"><span class="com">//竖屏时使用的样式</span><span class="pln">
+</span><span class="lit">@media</span><span class="pln"> all </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">orientation</span><span class="pun">:</span><span class="pln">portrait</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">css</span><span class="pun">{}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">//横屏时使用的样式</span><span class="pln">
+</span><span class="lit">@media</span><span class="pln"> all </span><span class="kwd">and</span><span class="pln"> </span><span class="pun">(</span><span class="pln">orientation</span><span class="pun">:</span><span class="pln">landscape</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">css</span><span class="pun">{}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>audio元素和video元素在ios和andriod中无法自动播放<br>
+应对方案：触屏即播</p>
+<pre class="prettyprint"><span class="pln">$</span><span class="pun">(</span><span class="str">'html'</span><span class="pun">).</span><span class="pln">one</span><span class="pun">(</span><span class="str">'touchstart'</span><span class="pun">,</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+audio</span><span class="pun">.</span><span class="pln">play</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">})</span></pre>
+<p>可参考《<a href="http://www.cnblogs.com/PeunZhang/archive/2013/02/05/2893093.html" target="_blank">无法自动播放的audio元素</a>》</p>
+<p>摇一摇功能<br>
+HTML5 deviceMotion：封装了运动传感器数据的事件，可以获取手机运动状态下的运动加速度等数据。</p>
+<p>手机拍照和上传图片<br>
+&lt;input type=”file”&gt;的accept 属性</p>
+<pre class="prettyprint"><span class="com">&lt;!-- 选择照片 --&gt;</span><span class="pln">
+</span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">file</span><span class="pln"> </span><span class="atn">accept</span><span class="pun">=</span><span class="atv">"image/*"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="com">&lt;!-- 选择视频 --&gt;</span><span class="pln">
+</span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">file</span><span class="pln"> </span><span class="atn">accept</span><span class="pun">=</span><span class="atv">"video/*"</span><span class="tag">&gt;</span></pre>
+<p>使用总结：</p>
+<p>ios 有拍照、录像、选取本地图片功能<br>
+部分android只有选取本地图片功能<br>
+winphone不支持<br>
+input控件默认外观丑陋<br>
+微信浏览器用户调整字体大小后页面矬了，怎么阻止用户调整<br>
+原因</p>
+<p>android侧是复写了layoutinflater 对textview做了统一处理<br>
+ios侧是修改了body.style.webkitTextSizeAdjust值<br>
+解决方案：</p>
+<p>android使用以下代码，该接口只在微信浏览器下有效(感谢jationhuang同学提供)</p>
+<pre class="prettyprint"><span class="com">/**
+* 页面加入这段代码可使Android机器页面不再受到用户字体缩放强制改变大小
+* 但是会有一个1秒左右的延迟，期间可以考虑通过loading展示
+* 仅供参考
+*/</span><span class="pln">
+</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="typ">WeixinJSBridge</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="str">"undefined"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+document</span><span class="pun">.</span><span class="pln">addEventListener</span><span class="pun">(</span><span class="str">"WeixinJSBridgeReady"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+setTimeout</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+</span><span class="typ">WeixinJSBridge</span><span class="pun">.</span><span class="pln">invoke</span><span class="pun">(</span><span class="str">'setFontSizeCallback'</span><span class="pun">,{</span><span class="str">"fontSize"</span><span class="pun">:</span><span class="lit">0</span><span class="pun">},</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">res</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+alert</span><span class="pun">(</span><span class="pln">JSON</span><span class="pun">.</span><span class="pln">stringify</span><span class="pun">(</span><span class="pln">res</span><span class="pun">));</span><span class="pln">
+</span><span class="pun">});</span><span class="pln">
+</span><span class="pun">},</span><span class="lit">0</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">});</span><span class="pln">
+</span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+setTimeout</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+</span><span class="typ">WeixinJSBridge</span><span class="pun">.</span><span class="pln">invoke</span><span class="pun">(</span><span class="str">'setFontSizeCallback'</span><span class="pun">,{</span><span class="str">"fontSize"</span><span class="pun">:</span><span class="lit">0</span><span class="pun">},</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">res</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+alert</span><span class="pun">(</span><span class="pln">JSON</span><span class="pun">.</span><span class="pln">stringify</span><span class="pun">(</span><span class="pln">res</span><span class="pun">));</span><span class="pln">
+</span><span class="pun">});</span><span class="pln">
+</span><span class="pun">},</span><span class="lit">0</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">})();</span></pre>
+<p>ios使用-webkit-text-size-adjust禁止调整字体大小</p>
+<pre class="prettyprint"><span class="pln">body</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">text</span><span class="pun">-</span><span class="pln">size</span><span class="pun">-</span><span class="pln">adjust</span><span class="pun">:</span><span class="pln"> </span><span class="lit">100</span><span class="pun">%!</span><span class="pln">important</span><span class="pun">;}</span></pre>
+<p>最好的解决方案：</p>
+<p>整个页面用rem或者百分比布局<br>
+消除transition闪屏<br>
+网络都是这么写的，但我并没有测试出来</p>
+<pre class="prettyprint"><span class="pun">.</span><span class="pln">css</span><span class="pun">{</span><span class="pln">
+</span><span class="com">/*设置内嵌的元素在 3D 空间如何呈现：保留 3D*/</span><span class="pln">
+</span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transform</span><span class="pun">-</span><span class="pln">style</span><span class="pun">:</span><span class="pln"> preserve</span><span class="pun">-</span><span class="lit">3d</span><span class="pun">;</span><span class="pln">
+</span><span class="com">/*（设置进行转换的元素的背面在面对用户时是否可见：隐藏）*/</span><span class="pln">
+</span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">backface</span><span class="pun">-</span><span class="pln">visibility</span><span class="pun">:</span><span class="pln"> hidden</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>开启硬件加速<br>
+解决页面闪白<br>
+保证动画流畅</p>
+<pre class="prettyprint"><span class="pun">.</span><span class="pln">css </span><span class="pun">{</span><span class="pln">
+</span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transform</span><span class="pun">:</span><span class="pln"> translate3d</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">transform</span><span class="pun">:</span><span class="pln"> translate3d</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">transform</span><span class="pun">:</span><span class="pln"> translate3d</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">);</span><span class="pln">
+transform</span><span class="pun">:</span><span class="pln"> translate3d</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>参考《<a href="http://www.cnblogs.com/PeunZhang/p/3510083.html" target="_blank">用CSS开启硬件加速来提高网站性能</a>》</p>
+<p>取消input在ios下，输入的时候英文首字母的默认大写</p>
+<pre class="prettyprint"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">autocapitalize</span><span class="pun">=</span><span class="atv">"off"</span><span class="pln"> </span><span class="atn">autocorrect</span><span class="pun">=</span><span class="atv">"off"</span><span class="pln"> </span><span class="tag">/&gt;</span></pre>
+<p>android 上去掉语音输入按钮</p>
+<pre class="prettyprint"><span class="pln">input</span><span class="pun">::-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">input</span><span class="pun">-</span><span class="pln">speech</span><span class="pun">-</span><span class="pln">button </span><span class="pun">{</span><span class="pln">display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">}</span></pre>
+<p>android 2.3 bug</p>
+<ul>
+<li>@-webkit-keyframes 需要以0%开始100%结束，0%的百分号不能去掉</li>
+<li>after和before伪类无法使用动画animation</li>
+<li>border-radius不支持%单位</li>
+<li>translate百分比的写法和scale在一起会导致失效，例如-webkit-transform: translate(-50%,-50%) scale(-0.5, 1)</li>
+</ul>
+<p>android 4.x bug</p>
+<ul>
+<li>三星 Galaxy S4中自带浏览器不支持border-radius缩写</li>
+<li>同时设置border-radius和背景色的时候，背景色会溢出到圆角以外部分</li>
+<li>部分手机(如三星)，a链接支持鼠标:visited事件，也就是说链接访问后文字变为紫色</li>
+<li>android无法同时播放多音频audio</li>
+</ul>
+<p>参考《<a href="https://github.com/yisibl/blog/issues/2" target="_blank">border-radius 移动之伤</a>》</p>
+<p>设计高性能CSS3动画的几个要素</p>
+<ul>
+<li>尽可能地使用合成属性transform和opacity来设计CSS3动画，不使用position的left和top来定位</li>
+<li>利用translate3D开启GPU加速</li>
+</ul>
+<p>参考《<a href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/" target="_blank">High Performance Animations</a>》</p>
+<p>fixed bug</p>
+<ul>
+<li>ios下fixed元素容易定位出错，软键盘弹出时，影响fixed元素定位</li>
+<li>android下fixed表现要比iOS更好，软键盘弹出时，不会影响fixed元素定位</li>
+<li>ios4下不支持position:fixed</li>
+</ul>
+<p>解决方案</p>
+<ul>
+<li>可用isroll.js，暂无完美方案</li>
+</ul>
+<p>参考</p>
+<p>《<a href="https://github.com/maxzhang/maxzhang.github.com/issues/2" target="_blank">移动端web页面使用position:fixed问题总结</a>》</p>
+<p>《<a href="http://www.cnblogs.com/PeunZhang/archive/2013/06/14/3117589.html" target="_blank">使用iScroll.js解决ios4下不支持position:fixed的问题</a>》</p>
+<p>如何阻止windows Phone的默认触摸事件<br>
+winphone下默认触摸事件事件使用e.preventDefault是无效的</p>
+<p>目前解决方法是使用样式来禁用</p>
+<pre class="prettyprint"><span class="pln">html</span><span class="pun">{-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">touch</span><span class="pun">-</span><span class="pln">action</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;}</span><span class="com">/* 禁止winphone默认触摸事件 */</span></pre>
+<p>参考</p>
+<p>《<a href="http://stackoverflow.com/questions/13396297/windows-phone-8-touch-support" target="_blank">Windows phone 8 touch support</a>》</p>
+<p>播放视频不全屏</p>
+<pre class="prettyprint"><span class="com">&lt;!--
+1.ios7+支持自动播放
+2.支持Airplay的设备（如：音箱、Apple TV)播放
+x-webkit-airplay="true"
+3.播放视频不全屏
+webkit-playsinline="true"
+--&gt;</span><span class="pln">
+</span><span class="tag">&lt;video</span><span class="pln"> </span><span class="atn">x-webkit-airplay</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">webkit-playsinline</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">preload</span><span class="pun">=</span><span class="atv">"auto"</span><span class="pln"> </span><span class="atn">autoplay</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://"</span><span class="tag">&gt;&lt;/video&gt;</span></pre>
+<h2>常用的移动端框架</h2>
+<p><strong>zepto.js</strong></p>
+<p>语法与jquery几乎一样，会jquery基本会zepto~</p>
+<p>最新版本已经更新到1.16</p>
+<p>官网：<a href="http://zeptojs.com/" target="_blank">http://zeptojs.com/</a></p>
+<p>中文(非官网)：<a href="http://www.css88.com/doc/zeptojs_api/" target="_blank">http://www.css88.com/doc/zeptojs_api/</a></p>
+<p>常使用的扩展模块：</p>
+<p>浏览器检测：<a href="https://github.com/madrobby/zepto/blob/master/src/detect.js" target="_blank">https://github.com/madrobby/zepto/blob/master/src/detect.js</a></p>
+<p>tap事件：<a href="https://github.com/madrobby/zepto/blob/master/src/touch.js" target="_blank">https://github.com/madrobby/zepto/blob/master/src/touch.js</a></p>
+<h3>iscroll.js</h3>
+<p>解决页面不支持弹性滚动，不支持fixed引起的问题~</p>
+<p>实现下拉刷新，滑屏，缩放等功能~</p>
+<p>最新版本已经更新到5.0</p>
+<p>官网：<a href="http://cubiq.org/iscroll-5" target="_blank">http://cubiq.org/iscroll-5</a></p>
+<h3><a name="api_3"></a>underscore.js</h3>
+<p>笔者没用过，不过听说好用，推荐给大家~</p>
+<p>该库提供了一整套函数式编程的实用功能，但是没有扩展任何JavaScript内置对象。</p>
+<p>最新版本已经更新到1.8.2</p>
+<p>官网：<a href="http://underscorejs.org/" target="_blank">http://underscorejs.org/</a></p>
+<h3><a name="api_4"></a>滑屏框架</h3>
+<p>适合上下滑屏、左右滑屏等滑屏切换页面的效果</p>
+<p><a href="https://github.com/peunzhang/slip.js" target="_blank">slip.js</a></p>
+<p><a href="https://github.com/peunzhang/iSlider" target="_blank">iSlider.js</a></p>
+<p><a href="https://github.com/peunzhang/fullpage" target="_blank">fullpage.js</a></p>
+<p><strong>flex布局</strong><br>
+flex布局目前可使用在移动中，并非所有的语法都全兼容，但以下写法笔者实践过，效果良好~</p>
+<pre class="prettyprint"><span class="com">/* ============================================================
+flex：定义布局为盒模型
+flex-v：盒模型垂直布局
+flex-1：子元素占据剩余的空间
+flex-align-center：子元素垂直居中
+flex-pack-center：子元素水平居中
+flex-pack-justify：子元素两端对齐
+兼容性：ios 4+、android 2.3+、winphone8+
+============================================================ */</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">flex</span><span class="pun">{</span><span class="pln">display</span><span class="pun">:-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">box</span><span class="pun">;</span><span class="pln">display</span><span class="pun">:-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">;</span><span class="pln">display</span><span class="pun">:-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">flexbox</span><span class="pun">;</span><span class="pln">display</span><span class="pun">:</span><span class="pln">flex</span><span class="pun">;}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">v</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">box</span><span class="pun">-</span><span class="pln">orient</span><span class="pun">:</span><span class="pln">vertical</span><span class="pun">;-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">direction</span><span class="pun">:</span><span class="pln">column</span><span class="pun">;-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">direction</span><span class="pun">:</span><span class="pln">column</span><span class="pun">;</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">direction</span><span class="pun">:</span><span class="pln">column</span><span class="pun">;}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="lit">1</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">box</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">:</span><span class="lit">1</span><span class="pun">;-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">:</span><span class="lit">1</span><span class="pun">;-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">:</span><span class="lit">1</span><span class="pun">;</span><span class="pln">flex</span><span class="pun">:</span><span class="lit">1</span><span class="pun">;}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">align</span><span class="pun">-</span><span class="pln">center</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">box</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">align</span><span class="pun">-</span><span class="pln">items</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;</span><span class="pln">align</span><span class="pun">-</span><span class="pln">items</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">pack</span><span class="pun">-</span><span class="pln">center</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">box</span><span class="pun">-</span><span class="pln">pack</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">justify</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">pack</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;</span><span class="pln">justify</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">pack</span><span class="pun">-</span><span class="pln">justify</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">box</span><span class="pun">-</span><span class="pln">pack</span><span class="pun">:</span><span class="pln">justify</span><span class="pun">;-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">justify</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln">space</span><span class="pun">-</span><span class="pln">between</span><span class="pun">;-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">pack</span><span class="pun">:</span><span class="pln">justify</span><span class="pun">;</span><span class="pln">justify</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln">space</span><span class="pun">-</span><span class="pln">between</span><span class="pun">;}</span></pre>
+<p>示例：两端对齐</p>
+<pre class="prettyprint"><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln">
+</span><span class="tag">&lt;html&gt;</span><span class="pln">
+</span><span class="tag">&lt;head&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"viewport"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"yes"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"apple-mobile-web-app-capable"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"black"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"apple-mobile-web-app-status-bar-style"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"telephone=no"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"format-detection"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"email=no"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"format-detection"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;style</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/css"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="com">/* ============================================================
+flex：定义布局为盒模型
+flex-v：盒模型垂直布局
+flex-1：子元素占据剩余的空间
+flex-align-center：子元素垂直居中
+flex-pack-center：子元素水平居中
+flex-pack-justify：子元素两端对齐
+兼容性：ios 4+、android 2.3+、winphone8+
+============================================================ */</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">flex</span><span class="pun">{</span><span class="pln">display</span><span class="pun">:-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">box</span><span class="pun">;</span><span class="pln">display</span><span class="pun">:-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">;</span><span class="pln">display</span><span class="pun">:-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">flexbox</span><span class="pun">;</span><span class="pln">display</span><span class="pun">:</span><span class="pln">flex</span><span class="pun">;}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">v</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">box</span><span class="pun">-</span><span class="pln">orient</span><span class="pun">:</span><span class="pln">vertical</span><span class="pun">;-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">direction</span><span class="pun">:</span><span class="pln">column</span><span class="pun">;-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">direction</span><span class="pun">:</span><span class="pln">column</span><span class="pun">;</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">direction</span><span class="pun">:</span><span class="pln">column</span><span class="pun">;}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="lit">1</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">box</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">:</span><span class="lit">1</span><span class="pun">;-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">:</span><span class="lit">1</span><span class="pun">;-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">:</span><span class="lit">1</span><span class="pun">;</span><span class="pln">flex</span><span class="pun">:</span><span class="lit">1</span><span class="pun">;}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">align</span><span class="pun">-</span><span class="pln">center</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">box</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">align</span><span class="pun">-</span><span class="pln">items</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;</span><span class="pln">align</span><span class="pun">-</span><span class="pln">items</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">pack</span><span class="pun">-</span><span class="pln">center</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">box</span><span class="pun">-</span><span class="pln">pack</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">justify</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">pack</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;</span><span class="pln">justify</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln">center</span><span class="pun">;}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">pack</span><span class="pun">-</span><span class="pln">justify</span><span class="pun">{-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">box</span><span class="pun">-</span><span class="pln">pack</span><span class="pun">:</span><span class="pln">justify</span><span class="pun">;-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">justify</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln">space</span><span class="pun">-</span><span class="pln">between</span><span class="pun">;-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">pack</span><span class="pun">:</span><span class="pln">justify</span><span class="pun">;</span><span class="pln">justify</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln">space</span><span class="pun">-</span><span class="pln">between</span><span class="pun">;}</span><span class="pln">
+</span><span class="tag">&lt;/style&gt;</span><span class="pln">
+</span><span class="tag">&lt;/head&gt;</span><span class="pln">
+</span><span class="tag">&lt;body&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"flex flex-pack-justify"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;div&gt;</span><span class="pln">模块一</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;div&gt;</span><span class="pln">模块二</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;div&gt;</span><span class="pln">模块三</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;div&gt;</span><span class="pln">模块四</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></pre>
+<p>使用注意：flex下的子元素必须为块级元素，非块级元素在android2.3机器下flex失效</p>
+<p>参考：</p>
+<p><a href="http://the-echoplex.net/flexyboxes/" target="_blank">flexyboxes</a></p>
+<p><a href="http://www.w3cplus.com/css3/old-flexbox-and-new-flexbox.html" target="_blank">“老”的Flexbox和“新”的Flexbox</a></p>
+<p><a href="http://www.w3cplus.com/css3/advanced-cross-browser-flexbox.html" target="_blank">跨浏览器的Flexbox</a></p>
+<h3>FastClick</h3>
+<p>消除在移动浏览器上触发click事件与一个物理Tap(敲击)之间的300延迟</p>
+<p>参考《<a href="https://github.com/ftlabs/fastclick" target="_blank">FastClick</a>》</p>
+<p>转载：http://peunzhang.cnblogs.com/</p>
+        </article>
+                <div class="asb-post-footer"><b>AD：</b><strong>【优秀主题】</strong><a target="_blank" href="https://themebetter.com/theme/tob">tob主题正式发布，够炫酷！ 完美的自适应布局，完善的图片站配置</a></div>                <div class="post-copyright">未经允许不得转载：<a href="http://www.daqianduan.com">大前端</a> » <a href="http://www.daqianduan.com/6281.html">手机移动端WEB资源整合</a></div>
+        <div class="action-share bdsharebuttonbox bdshare-button-style0-24" data-bd-bind="1500366248167">
+            <span>分享到：</span><a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a class="bds_bdhome" data-cmd="bdhome" title="分享到百度新首页"></a><a class="bds_tqf" data-cmd="tqf" title="分享到腾讯朋友"></a><a class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a class="bds_diandian" data-cmd="diandian" title="分享到点点网"></a><a class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a class="bds_ty" data-cmd="ty" title="分享到天涯社区"></a><a class="bds_kaixin001" data-cmd="kaixin001" title="分享到开心网"></a><a class="bds_taobao" data-cmd="taobao"></a><a class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a><a class="bds_copy" data-cmd="copy" title="分享到复制网址"></a><a class="bds_more" data-cmd="more">更多</a> <span>(</span><a class="bds_count" data-cmd="count" title="累计分享167次">167</a><span>)</span>       </div>
+        <div class="article-tags">标签：<a href="http://www.daqianduan.com/tag/html5" rel="tag">HTML5</a><a href="http://www.daqianduan.com/tag/%e7%a7%bb%e5%8a%a8%e5%ba%94%e7%94%a8" rel="tag">移动应用</a><a href="http://www.daqianduan.com/tag/mobile-development" rel="tag">移动开发</a></div>
+
+                <div class="article-author">
+            <img data-src="https://secure.gravatar.com/avatar/e6c31d18052706ff3f5fe7e496031e47?s=100&amp;d=mm" class="avatar avatar-100" height="50" width="50" src="https://secure.gravatar.com/avatar/e6c31d18052706ff3f5fe7e496031e47?s=100&amp;d=mm" style="display: block;">           <h4><i class="fa fa-user" aria-hidden="true"></i><a title="查看更多文章" href="http://www.daqianduan.com/author/haozichen">浩子</a></h4>
+            大前端创始人，前端开发人员一枚，专注Web前端开发与可用性设计，也是国内一直坚持原创的WordPress主题开发者，创建 <a href="https://themebetter.com">themebetter.com</a> 主题开发团队，做国内更好的WordPress主题。        </div>
+
+        <div class="asb asb-post asb-post-02"><script type="text/javascript">
+var cpro_id="u2273660";
+(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",rsi0:"778",rsi1:"250",pat:"6",tn:"baiduCustNativeAD",rss1:"#FFFFFF",conBW:"0",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"14",rss2:"#555555",titSU:"0",ptbg:"90",piw:"0",pih:"0",ptp:"0"}
+</script>
+
+
+
+</body>
+</html>
