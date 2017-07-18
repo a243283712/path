@@ -1,0 +1,151 @@
+<%- include('../templates/head') %>
+<body>
+    <style type="text/css">
+        span{
+
+
+            color: #42b983;
+        }
+        em{
+            color:#f60;
+            font-style: normal;
+             font-size: 14px;
+        }
+    </style>
+<div class="container">
+
+<h3>toUpperCase</h3>
+<p><code>toUpperCase()</code>把一个字符串全部变为大写：</p>
+<pre><code class="javascript"><span class="keyword">var</span> s = <span class="string">'Hello'</span>;
+s.toUpperCase(); <span class="comment">// 返回'HELLO'</span></code></pre>
+
+<h3 id="tolowercase">toLowerCase</h3>
+<p><code>toLowerCase()</code>把一个字符串全部变为小写：</p>
+<pre><code class="javascript"><span class="keyword">var</span> s = <span class="string">'Hello'</span>;
+<span class="keyword">var</span> lower = s.toLowerCase(); <span class="comment">// 返回'hello'并赋值给变量lower</span>
+lower; <span class="comment">// 'hello'</span>
+</code></pre>
+
+<h3 id="indexof">indexOf</h3>
+<p><code>indexOf()</code>会搜索指定字符串出现的位置：</p>
+<pre><code class="javascript"><span class="keyword">var</span> s = <span class="string">'hello, world'</span>;
+s.indexOf(<span class="string">'world'</span>); <span class="comment">// 返回7</span>
+s.indexOf(<span class="string">'World'</span>); <span class="comment">// 没有找到指定的子串，返回-1</span>
+</code></pre>
+
+<h3 id="substring">substring     </h3>
+<p><code>substring()</code>返回指定索引区间的子串：</p>
+<pre><code class="javascript"><span class="keyword">var</span> s = <span class="string">'hello, world'</span>
+s.substring(<span class="number">0</span>, <span class="number">5</span>); <span class="comment">// 从索引0开始到5（不包括5），返回'hello'</span>
+s.substring(<span class="number">7</span>); <span class="comment">// 从索引7开始到结束，返回'world'</span>
+</code></pre>
+
+<h2>数组</h2>
+<h3 id="indexof">indexOf</h3>
+<p>与String类似，<code>Array</code>也可以通过<code>indexOf()</code>来搜索一个指定的元素的位置：</p>
+<pre><code class="javascript"><span class="keyword">var</span> arr = [<span class="number">10</span>, <span class="number">20</span>, <span class="string">'30'</span>, <span class="string">'xyz'</span>];
+arr.indexOf(<span class="number">10</span>); <span class="comment">// 元素10的索引为0</span>
+arr.indexOf(<span class="number">20</span>); <span class="comment">// 元素20的索引为1</span>
+arr.indexOf(<span class="number">30</span>); <span class="comment">// 元素30没有找到，返回-1</span>
+arr.indexOf(<span class="string">'30'</span>); <span class="comment">// 元素'30'的索引为2</span>
+</code></pre>
+
+<h3 id="slice">slice</h3>
+<p><code>slice()</code>就是对应String的<code>substring()</code>版本，它截取<code>Array</code>的部分元素，然后返回一个新的<code>Array</code>：</p>
+<pre><code class="javascript"><span class="keyword">var</span> arr = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>, <span class="string">'E'</span>, <span class="string">'F'</span>, <span class="string">'G'</span>];
+arr.slice(<span class="number">0</span>, <span class="number">3</span>); <span class="comment">// 从索引0开始，到索引3结束，但不包括索引3: ['A', 'B', 'C']</span>
+arr.slice(<span class="number">3</span>); <span class="comment">// 从索引3开始到结束: ['D', 'E', 'F', 'G']</span>
+</code></pre>
+
+<p>如果不给<code>slice()</code>传递任何参数，它就会从头到尾截取所有元素。利用这一点，我们可以很容易地复制一个<code>Array</code>：</p>
+<pre><code class="javascript"><span class="keyword">var</span> arr = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>, <span class="string">'E'</span>, <span class="string">'F'</span>, <span class="string">'G'</span>];
+<span class="keyword">var</span> aCopy = arr.slice();
+aCopy; <span class="comment">// ['A', 'B', 'C', 'D', 'E', 'F', 'G']</span>
+aCopy === arr; <span class="comment">// false</span>
+</code></pre>
+
+<h3 id="splice">splice</h3>
+<p><code>splice()</code>方法是修改<code>Array</code>的“万能方法”，它可以从指定的索引开始删除若干元素，然后再从该位置添加若干元素：</p>
+<pre><code class="javascript"><span class="keyword">var</span> arr = [<span class="string">'Microsoft'</span>, <span class="string">'Apple'</span>, <span class="string">'Yahoo'</span>, <span class="string">'AOL'</span>, <span class="string">'Excite'</span>, <span class="string">'Oracle'</span>];
+<span class="comment">// 从索引2开始删除3个元素,然后再添加两个元素:</span>
+arr.splice(<span class="number">2</span>, <span class="number">3</span>, <span class="string">'Google'</span>, <span class="string">'Facebook'</span>); <span class="comment">// 返回删除的元素 ['Yahoo', 'AOL', 'Excite']</span>
+arr; <span class="comment">// ['Microsoft', 'Apple', 'Google', 'Facebook', 'Oracle']</span>
+<span class="comment">// 只删除,不添加:</span>
+arr.splice(<span class="number">2</span>, <span class="number">2</span>); <span class="comment">// ['Google', 'Facebook']</span>
+arr; <span class="comment">// ['Microsoft', 'Apple', 'Oracle']</span>
+<span class="comment">// 只添加,不删除:</span>
+arr.splice(<span class="number">2</span>, <span class="number">0</span>, <span class="string">'Google'</span>, <span class="string">'Facebook'</span>); <span class="comment">// 返回[],因为没有删除任何元素</span>
+arr; <span class="comment">// ['Microsoft', 'Apple', 'Google', 'Facebook', 'Oracle']</span>
+</code></pre>
+
+<h3 id="concat">concat</h3>
+<p><code>concat()</code>方法把当前的<code>Array</code>和另一个<code>Array</code>连接起来，并返回一个新的<code>Array</code>：</p>
+<pre><code class="javascript"><span class="keyword">var</span> arr = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>];
+<span class="keyword">var</span> added = arr.concat([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);
+added; <span class="comment">// ['A', 'B', 'C', 1, 2, 3]</span>
+arr; <span class="comment">// ['A', 'B', 'C']</span>
+</code></pre>
+<p>
+    请注意，concat()方法并没有修改当前Array，而是返回了一个新的Array。
+
+实际上，concat()方法可以接收任意个元素和Array，并且自动把Array拆开，然后全部添加到新的Array里：
+</p>
+<pre><code class="javascript"><span class="keyword">var</span> arr = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>];
+arr.concat(<span class="number">1</span>, <span class="number">2</span>, [<span class="number">3</span>, <span class="number">4</span>]); <span class="comment">// ['A', 'B', 'C', 1, 2, 3, 4]</span>
+</code></pre>
+
+<h3 id="join">join</h3>
+<p><code>join()</code>方法是一个非常实用的方法，它把当前<code>Array</code>的每个元素都用指定的字符串连接起来，然后返回连接后的字符串：</p>
+<pre><code class="javascript"><span class="keyword">var</span> arr = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];
+arr.join(<span class="string">'-'</span>); <span class="comment">// 'A-B-C-1-2-3'</span>
+</code></pre>
+<p>如果Array的元素不是字符串，将自动转换为字符串后再连接。</p>
+
+
+<h2>对象</h2>
+<p>如果我们要检测<code>对象</code>是否拥有某一属性，可以用<code>in</code>操作符：</p>
+<pre><code class="ruby">var xiaoming = {
+    <span class="symbol">name:</span> <span class="string">'小明'</span>,
+    <span class="symbol">birth:</span> <span class="number">1990</span>,
+    <span class="symbol">school:</span> <span class="string">'No.1 Middle School'</span>,
+    <span class="symbol">height:</span> <span class="number">1.70</span>,
+    <span class="symbol">weight:</span> <span class="number">65</span>,
+    <span class="symbol">score:</span> null
+};
+<span class="string">'name'</span> <span class="keyword">in</span> xiaoming; <span class="regexp">//</span> <span class="keyword">true</span>
+<span class="string">'grade'</span> <span class="keyword">in</span> xiaoming; <span class="regexp">//</span> <span class="keyword">false</span>
+</code></pre>
+
+<p>
+    不过要小心，如果in判断一个属性存在，这个属性不一定是xiaoming的，它可能是xiaoming继承得到的：
+
+'toString' in xiaoming; // true
+因为toString定义在object对象中，而所有对象最终都会在原型链上指向object，所以xiaoming也拥有toString属性。
+
+要判断一个属性是否是xiaoming自身拥有的，而不是继承得到的，可以用hasOwnProperty()方法：
+
+var xiaoming = {
+    name: '小明'
+};
+xiaoming.hasOwnProperty('name'); // true
+xiaoming.hasOwnProperty('toString'); // false
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <%- include('../templates/foot') %>

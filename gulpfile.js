@@ -126,6 +126,7 @@ gulp.task('images', function(){
     .pipe(gulp.dest('./dist/images'));
 });
 
+
 // 拷贝前端资源
 gulp.task('copy', function(){
     gulp.src([

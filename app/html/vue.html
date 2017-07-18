@@ -1,0 +1,51 @@
+<%- include('../templates/head') %>
+<body>
+    <style type="text/css">
+        span{
+               color: #42b983;
+        }
+    </style>
+    <div class="container">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">安装</h3>
+            </div>
+            <div class="panel-body">
+                <pre><div class="line"><span class="comment"># 全局安装 vue-cli</span></div><div class="line">$ npm install --global vue-cli</div><div class="line"><span class="comment"># 创建一个基于 webpack 模板的新项目</span></div><div class="line">$ vue init webpack my-project</div><div class="line"><span class="comment"># 安装依赖，走你</span></div><div class="line">$ <span class="built_in">cd</span> my-project</div><div class="line">$ npm install</div><div class="line">$ npm run dev</div></pre>
+                <pre><div class="line">git <span class="built_in">clone</span> https://github.com/vuejs/vue.git node_modules/vue</div><div class="line"><span class="built_in">cd</span> node_modules/vue</div><div class="line">npm install</div><div class="line">npm run build</div></pre>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">配置</h3>
+            </div>
+            <div class="panel-body">
+                <pre><div class="line"><span class="comment"># 安装css依赖</span></div><div class="line">$ cnpm install style-loader --save-dev</div><div class="line">$ cnpm install css-loader --save-dev</div><div class="line">$ cnpm install file-loader --save-dev</div><div class="line"><span class="comment"># 安装less依赖</span></div><div class="line">$ npm install less less-loader --save</div><div>
+test: /\.css$/,
+   loader: "style-loader!css-loader",
+},
+{
+test: /\.less$/,
+    loader: "style-loader!css-loader!less-loader"
+}
+</div></pre>
+            <pre><div class="line"><span class="comment"># 安装 路由</span></div><div class="line">$ npm install vue-router --save</div></pre>
+            <pre><div class="line"><span class="comment"># 安装 vuex</span></div><div class="line">$ npm install vuex --save</div></pre>
+            <pre><div class="line"><span class="comment"># 安装 vue-resource</span></div><div class="line">$ npm install vue-resource --save</div></pre>
+            <pre><div class="line"><span class="comment"># 安装 vue-axios</span></div><div class="line">$ npm install vue-axios --save</div></pre>
+
+            <p>简说安装依赖是"--save"和"--save dev"的区别：<br />
+                在 package.json 文件里面提现出来的区别就是，使用 --save-dev 安装的 插件，被写入到 devDependencies 对象里面去，而使用 --save 安装的插件，则被写入到 dependencies 对象里面去。devDependencies  里面的插件只用于开发环境，不用于生产环境，而 dependencies  是需要发布到生产环境的。</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    <%- include('../templates/foot') %>
