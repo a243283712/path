@@ -126,7 +126,6 @@ gulp.task('images', function(){
     .pipe(gulp.dest('./dist/images'));
 });
 
-
 // 拷贝前端资源
 gulp.task('copy', function(){
     gulp.src([
@@ -167,16 +166,7 @@ gulp.task('copy', function(){
     ])
     .pipe(gulp.dest('./dist/libs/nicescroll'));
 
-    gulp.src([
 
-      './app/libs/icheck/icheck.min.js'
-    ])
-    .pipe(gulp.dest('./dist/libs/icheck'));
-
-    gulp.src([
-      './app/libs/icheck/skins/**'
-    ])
-    .pipe(gulp.dest('./dist/libs/icheck/skins'));
     //  gulp.src([
     //   './app/libs/font-awesome-4.7.0/**'
     // ])
